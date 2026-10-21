@@ -30,6 +30,8 @@ Develop reproducible Python simulations for an academic paper on event-centric m
 
 **Working method**
 
+- User instruction: work directly on `Solid_first`. After each completed task or coherent change, commit and push it immediately to GitHub. Do not leave completed work only in the cloud workspace. Include relevant documentation and selected numerical evidence; keep virtual environments and caches out of Git. Preserve existing history and use ordinary pushes (no force push).
+
 - Complete one bounded milestone at a time.
 
 - Make routine implementation decisions independently and explain material choices.

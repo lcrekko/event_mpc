@@ -1,0 +1,11 @@
+{
+  "initial_energy_J": 1.5200443845e-06,
+  "maximum_abs_angle_rad": 0.08608779854859126,
+  "exact_balance_max_abs_residual_J": 7.835054762102278e-20,
+  "exact_balance_relative_residual": 5.154490778030487e-14,
+  "equation_4_max_abs_residual_J": 2.036207204947128e-10,
+  "equation_4_relative_residual": 0.00013395708873441308,
+  "signed_exact_work_J": 3.537883037909879e-07,
+  "signed_equation_4_work_J": 3.539919245114042e-07,
+  "dissipated_energy_J": 5.49526304791205e-07
+}
