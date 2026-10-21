@@ -14,9 +14,7 @@ Earlier Milestone F results are preserved separately.
 
 For B–F see [implementation/validation decisions](docs/milestones-b-f.md),
 [experiment plan](docs/experiment-plan.md), and the
-[saved scientific report](results/milestone-f/REPORT.md). A Chinese
-[getting-started guide](docs/使用指南.md) explains the cloud/GitHub/local workflow.
-The report records completed and unrun configurations explicitly while a suite
+[saved scientific report](results/milestone-f/REPORT.md). The report records completed and unrun configurations explicitly while a suite
 is running; use its status table, not the presence of a directory, as evidence.
 
 The initial [manuscript audit](docs/onboarding/specification-audit.md),
