@@ -16,15 +16,56 @@
   "mpc_candidate_evaluations": 25187,
   "rejected_candidates": 23,
   "figure_files": {
-    "figure2-parameters.svg": 33248,
-    "figure3-actuation.png": 268917,
-    "figure1-performance.svg": 48742,
-    "figure2-parameters.pdf": 202007,
-    "figure1-performance.png": 329334,
-    "figure2-parameters.png": 112614,
-    "figure3-actuation.pdf": 756247,
-    "figure3-actuation.svg": 1408554,
-    "figure1-performance.pdf": 268328
+    "figure2-parameters.svg": 36352,
+    "figure3-actuation.png": 251415,
+    "figure1-performance.svg": 52516,
+    "figure2-parameters.pdf": 134712,
+    "figure1-performance.png": 330975,
+    "figure2-parameters.png": 117365,
+    "figure3-actuation.pdf": 658891,
+    "figure3-actuation.svg": 1411231,
+    "figure1-performance.pdf": 166618
   },
-  "svg_xml_valid": true
+  "svg_xml_valid": true,
+  "compact_layout": {
+    "verified_axes": 8,
+    "height_over_width": 0.25,
+    "gap_inches": 0.08,
+    "figure_size_inches": {
+      "figure1": [
+        4.5,
+        3.575
+      ],
+      "figure2": [
+        4.5,
+        3.3150000000000004
+      ],
+      "figure3": [
+        4.5,
+        2.3600000000000003
+      ]
+    },
+    "grid": "both",
+    "distinct_parameter_colors": 3,
+    "distinct_actuation_colors": 2,
+    "scientific_files_unchanged": [
+      "results/startup-comparison/ec-mpc/events.json",
+      "results/startup-comparison/ec-mpc/actions.json",
+      "results/startup-comparison/ec-mpc/metrics.json",
+      "results/startup-comparison/ec-mpc/search-index.json",
+      "results/startup-comparison/ec-mpc/status.json",
+      "results/startup-comparison/ec-mpc/trajectory.npz",
+      "results/startup-comparison/ec-mpc/metadata.json",
+      "results/startup-comparison/ec-mpc/search.npz",
+      "results/startup-comparison/nominal-control/events.json",
+      "results/startup-comparison/nominal-control/actions.json",
+      "results/startup-comparison/nominal-control/metrics.json",
+      "results/startup-comparison/nominal-control/search-index.json",
+      "results/startup-comparison/nominal-control/status.json",
+      "results/startup-comparison/nominal-control/trajectory.npz",
+      "results/startup-comparison/nominal-control/metadata.json",
+      "results/startup-comparison/nominal-control/search.npz"
+    ],
+    "performance_csv_unchanged": true
+  }
 }

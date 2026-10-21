@@ -14,7 +14,10 @@
 没有筛选更有利的随机种子。优化计算时间没有加入模拟控制延迟。
 
 图像均提供真正 LaTeX/Computer Modern 字体的 PDF、SVG 和600dpi PNG。
-建议论文使用PDF。标签与图例按用户要求设置，字体按单栏3.5英寸宽设计。
+建议论文使用PDF。新版每个绘图区高:宽=1:4，间距约2mm，单位并入纵轴标签，
+幅值标为 `|A| [deg]`。后两图的不同子图采用不同颜色，全部加入纵横网格。
+整图默认宽4.5英寸，高度依次为3.575、3.315、2.36英寸；采用11pt坐标标签、
+10pt刻度及11pt图例。可通过 `--width-inches` 调整宽度，维持绘图区的1:4比例。
 
 图1：[PDF](figures/figure1-performance.pdf) · [SVG](figures/figure1-performance.svg)
 

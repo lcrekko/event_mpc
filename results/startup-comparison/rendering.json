@@ -3,20 +3,108 @@
   "font": "Computer Modern Roman (native LaTeX serif)",
   "figure_size_inches": {
     "figure1": [
-      3.5,
-      5.5
+      4.5,
+      3.575
     ],
     "figure2": [
-      3.5,
-      5.0
+      4.5,
+      3.3150000000000004
     ],
     "figure3": [
-      3.5,
-      3.7
+      4.5,
+      2.3600000000000003
     ]
   },
+  "layout": {
+    "figure1-performance": {
+      "figure_inches": [
+        4.5,
+        3.575
+      ],
+      "axes": [
+        {
+          "width_inches": 3.4999999999999987,
+          "height_inches": 0.8749999999999998,
+          "height_over_width": 0.25000000000000006,
+          "ylabel": "$|A|\\,[\\mathrm{deg}]$"
+        },
+        {
+          "width_inches": 3.4999999999999996,
+          "height_inches": 0.875,
+          "height_over_width": 0.25000000000000006,
+          "ylabel": "$t_{\\mathrm{M}}-t^{\\ast}_{\\mathrm{M}}\\;[\\mathrm{ms}]$"
+        },
+        {
+          "width_inches": 3.4999999999999996,
+          "height_inches": 0.875,
+          "height_over_width": 0.25000000000000006,
+          "ylabel": "$q\\,[\\mu\\mathrm{J}]$"
+        }
+      ],
+      "subplot_gap_inches": 0.08
+    },
+    "figure2-parameters": {
+      "figure_inches": [
+        4.5,
+        3.3150000000000004
+      ],
+      "axes": [
+        {
+          "width_inches": 3.5000000000000004,
+          "height_inches": 0.8749999999999999,
+          "height_over_width": 0.24999999999999994,
+          "ylabel": "$I_0\\,[\\mathrm{mA}]$"
+        },
+        {
+          "width_inches": 3.5000000000000004,
+          "height_inches": 0.8749999999999999,
+          "height_over_width": 0.24999999999999994,
+          "ylabel": "$g^{-}_{\\mathrm{s}}$"
+        },
+        {
+          "width_inches": 3.5000000000000004,
+          "height_inches": 0.8749999999999999,
+          "height_over_width": 0.24999999999999994,
+          "ylabel": "$g^{+}_{\\mathrm{us}}$"
+        }
+      ],
+      "subplot_gap_inches": 0.08
+    },
+    "figure3-actuation": {
+      "figure_inches": [
+        4.5,
+        2.3600000000000003
+      ],
+      "axes": [
+        {
+          "width_inches": 3.5000000000000004,
+          "height_inches": 0.8750000000000001,
+          "height_over_width": 0.25,
+          "ylabel": "$\\tau\\,[\\mu\\mathrm{N\\,m}]$"
+        },
+        {
+          "width_inches": 3.5000000000000004,
+          "height_inches": 0.8750000000000001,
+          "height_over_width": 0.25,
+          "ylabel": "$\\nu_{\\mathrm{f},n_{A}}$"
+        }
+      ],
+      "subplot_gap_inches": 0.08
+    }
+  },
+  "plot_height_over_width": 0.25,
+  "parameter_colors": [
+    "#0072B2",
+    "#D55E00",
+    "#009E73"
+  ],
+  "actuation_colors": [
+    "#0072B2",
+    "#8B5FBF"
+  ],
+  "grid": "both",
   "tick_font_pt": 10,
-  "axis_label_pt": 12,
+  "axis_label_pt": 11,
   "legend_pt": 11,
   "png_dpi": 600,
   "formats": [
@@ -90,8 +178,8 @@
     }
   },
   "provenance": {
-    "head": "c766fce8f5f2a1c0f37c67f8b422ca58c66a5ee0",
-    "git_status": "M  README.md\nA  configs/startup-comparison.json\nM  docs/cloud-start.md\nA  docs/startup-comparison.md\nM  event_mpc/closed_loop.py\nM  event_mpc/optimization.py\nAM event_mpc/paper_figures.py\nA  event_mpc/startup_comparison.py\nA  results/startup-comparison/README.md\nA  results/startup-comparison/ec-mpc/actions.json\nA  results/startup-comparison/ec-mpc/events.json\nA  results/startup-comparison/ec-mpc/metadata.json\nA  results/startup-comparison/ec-mpc/metrics.json\nA  results/startup-comparison/ec-mpc/search-index.json\nA  results/startup-comparison/ec-mpc/search.npz\nA  results/startup-comparison/ec-mpc/status.json\nA  results/startup-comparison/ec-mpc/trajectory.npz\nA  results/startup-comparison/execution.log\nAM results/startup-comparison/figures/figure1-performance.pdf\nA  results/startup-comparison/figures/figure1-performance.png\nAM results/startup-comparison/figures/figure1-performance.svg\nAM results/startup-comparison/figures/figure2-parameters.pdf\nA  results/startup-comparison/figures/figure2-parameters.png\nAM results/startup-comparison/figures/figure2-parameters.svg\nAM results/startup-comparison/figures/figure3-actuation.pdf\nA  results/startup-comparison/figures/figure3-actuation.png\nAM results/startup-comparison/figures/figure3-actuation.svg\nA  results/startup-comparison/integrity.json\nA  results/startup-comparison/nominal-control/actions.json\nA  results/startup-comparison/nominal-control/events.json\nA  results/startup-comparison/nominal-control/metadata.json\nA  results/startup-comparison/nominal-control/metrics.json\nA  results/startup-comparison/nominal-control/search-index.json\nA  results/startup-comparison/nominal-control/search.npz\nA  results/startup-comparison/nominal-control/status.json\nA  results/startup-comparison/nominal-control/trajectory.npz\nA  results/startup-comparison/pdf-fonts.txt\nA  results/startup-comparison/performance.csv\nA  results/startup-comparison/plan.json\nA  results/startup-comparison/rendering.json\nA  results/startup-comparison/tests.txt\nA  tests/test_paper_figures.py\nA  tests/test_startup_comparison.py",
+    "head": "7b28700d05db19fca50a3377b8e7fe1bbf0244ca",
+    "git_status": "M docs/startup-comparison.md\n M event_mpc/paper_figures.py\n M results/startup-comparison/README.md\n M results/startup-comparison/figures/figure1-performance.pdf\n M results/startup-comparison/figures/figure1-performance.png\n M results/startup-comparison/figures/figure1-performance.svg\n M results/startup-comparison/figures/figure2-parameters.pdf\n M results/startup-comparison/figures/figure2-parameters.png\n M results/startup-comparison/figures/figure2-parameters.svg\n M results/startup-comparison/figures/figure3-actuation.pdf\n M results/startup-comparison/figures/figure3-actuation.png\n M results/startup-comparison/figures/figure3-actuation.svg\n M results/startup-comparison/rendering.json",
     "source_sha256": {
       "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
       "event_mpc/__main__.py": "076a0fce622283c50b5049b87f67699b336449819cffb71f8a7f542226d80808",
@@ -106,7 +194,7 @@
       "event_mpc/numerical_audit.py": "c5a10cdc07dac292afeaaddfe556b072df7eb34009ddf2ee3d4bed7f37774745",
       "event_mpc/objective.py": "eeab1ec28b88cb4b31932217e6dff3328d94fdff51be93cca3b75bdd8b75e5a3",
       "event_mpc/optimization.py": "aeadd549b9ca67f074c8b13ea76b014b3db1ba806337086bb69f3ddffbc6c1f3",
-      "event_mpc/paper_figures.py": "cb7398f019bede19d93ac124c16e36695b30c03c12cb788c1d8a572f9457c4c3",
+      "event_mpc/paper_figures.py": "d90324106926e8d459010efdc6dab4c98cc2ef9a8f38e3bc09758865a3e54525",
       "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
       "event_mpc/profile.py": "b69917aa5e0508127c435fc3a687bb92ca8c8b8d6669c8dfa1abd5dad03ae4ca",
       "event_mpc/report.py": "1fc71232d9d7ac6ef4fc841a387ab2cd1628c5b9d9d07c35f910230f8c991d11",

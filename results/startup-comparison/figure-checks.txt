@@ -1,0 +1,7 @@
+test_figure_quantities_preserve_units_and_timing_sign (test_paper_figures.PaperDataTests.test_figure_quantities_preserve_units_and_timing_sign) ... ok
+test_right_continuous_actions_and_switches_define_exact_torque (test_paper_figures.PaperDataTests.test_right_continuous_actions_and_switches_define_exact_torque) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+OK
