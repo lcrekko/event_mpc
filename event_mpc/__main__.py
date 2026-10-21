@@ -20,7 +20,7 @@ def write_json(path, data):
     path.write_text(json.dumps(data, indent=2, allow_nan=False)+"\n", encoding="utf-8")
 
 
-def provenance():
+def provenance(seed=None, randomness="none; deterministic integration"):
     def git(*args):
         p = subprocess.run(["git", "-C", str(ROOT), *args], text=True, capture_output=True)
         return p.stdout.strip() if p.returncode == 0 else "unavailable"
@@ -28,8 +28,8 @@ def provenance():
             "source_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                               for p in sorted((ROOT/"event_mpc").glob("*.py"))},
             "python": sys.version, "numpy": np.__version__, "scipy": scipy.__version__,
-            "platform": platform.platform(), "seed": None,
-            "randomness": "none; deterministic prescribed-current integration"}
+            "platform": platform.platform(), "seed": seed,
+            "randomness": randomness}
 
 
 def main():

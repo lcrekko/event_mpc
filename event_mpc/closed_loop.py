@@ -55,7 +55,8 @@ def run_closed_loop(output,intervals=50,seed=1,search=None,plant_parameters=None
               'objective':asdict(objective),'objective_weights':objective.array().tolist(),
               'information':'detector timestamps plus owned circuit state; no measured plant state',
               'delay':'sensing delay causal; optimizer wall time measured but not injected into simulated time',
-              'provenance':provenance(),'numba':version('numba'),'llvmlite':version('llvmlite')}
+              'provenance':provenance(seed,'NumPy default_rng PCG64; candidate draws generated before parallel evaluation'),
+              'numba':version('numba'),'llvmlite':version('llvmlite')}
     write_json(output/'metadata.json',metadata)
     warm_start=perf_counter()
     batch_cost(estimate,np.tile(old_theta,(1,s.horizon,1)),0.,0.,0,pa,na,objective.array(),settings.max_step,settings.rtol,settings.timeout)

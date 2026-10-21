@@ -30,7 +30,7 @@ def profile():
             'warmup_seconds':warmup,'valid_candidates':int(np.count_nonzero(statuses==0)),
             'max_cost_difference_s2':max(errors),'seed':17,'horizon':4,
             'speedup_per_candidate':reference_seconds/5/(fast_seconds/256),
-            'provenance':provenance()}
+            'provenance':provenance(17,'NumPy default_rng PCG64 Gaussian candidate draws')}
 
 
 if __name__=='__main__':
