@@ -149,7 +149,7 @@ def make_report(suite,allow_incomplete=False):
     (suite/'summary.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n',encoding='utf-8')
     scalar_keys=[k for k,v in rows[0].items() if not isinstance(v,dict)] if rows else []
     with (suite/'summary.csv').open('w',newline='',encoding='utf-8') as f:
-        writer=csv.DictWriter(f,fieldnames=scalar_keys,extrasaction='ignore');writer.writeheader();writer.writerows(rows)
+        writer=csv.DictWriter(f,fieldnames=scalar_keys,extrasaction='ignore',lineterminator='\n');writer.writeheader();writer.writerows(rows)
     lines=['# Milestone F simulation results','',
            'Generated from saved raw data; no model integration occurs during reporting.',
            'Settings and hypotheses: [experiment plan](../../docs/experiment-plan.md).','',

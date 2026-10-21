@@ -1,0 +1,32 @@
+{
+  "name": "uniform-seed1",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "uniform",
+  "timing_rms_ms": 0.628833734474942,
+  "last10_timing_rms_ms": 0.29756935657873274,
+  "amplitude_rms_deg": 0.07831962496031697,
+  "last10_amplitude_rms_deg": 0.05433136460159254,
+  "absolute_work_uJ": 4.725484095278437,
+  "signed_work_uJ": 4.702083316657431,
+  "maximum_angle_deg": 5.13300541172412,
+  "exact_energy_relative_residual": 3.8282542318994e-13,
+  "equation4_energy_relative_residual": 0.001590818138444649,
+  "sensor_timestamp_max_error_us": 0.017116510653281125,
+  "sensor_speed_max_relative_error": 3.0668603698840984e-05,
+  "sensor_delay_mean_us": 159.08433603861445,
+  "optimization_median_s": 1.1740316660002463,
+  "optimization_p95_s": 1.441850226850283,
+  "optimization_max_s": 1.545820210000329,
+  "optimization_to_interval_p95": 28.723271612582423,
+  "invalid_candidate_fraction": 0.002762645914396887,
+  "candidate_status_counts": {
+    "0": 25629,
+    "2": 71
+  },
+  "evaluations": 25700,
+  "fallback_count": 0,
+  "wall_seconds": 69.0579053649999
+}

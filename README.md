@@ -1,8 +1,17 @@
 # Event-centric scanning-mirror MPC
 
-Milestone A implements only the mechanical model with prescribed current.
+Milestones A–E implement mechanics, neurons, hybrid actuation, sparse sensing,
+event prediction and causal EC-MPC. Milestone F runs the declared comparisons,
+sensitivity and mismatch experiments.
 The manuscript is in `paper/`; scientific scope is described in AGENTS.md and
 CODEX_SETUP.md. See [model and validation conventions](docs/milestone-a.md).
+
+For B–F see [implementation/validation decisions](docs/milestones-b-f.md),
+[experiment plan](docs/experiment-plan.md), and the
+[saved scientific report](results/milestone-f/REPORT.md). A Chinese
+[getting-started guide](docs/使用指南.md) explains the cloud/GitHub/local workflow.
+The report records completed and unrun configurations explicitly while a suite
+is running; use its status table, not the presence of a directory, as evidence.
 
 The initial [manuscript audit](docs/onboarding/specification-audit.md),
 [open questions](docs/onboarding/open-questions.md), and
@@ -66,11 +75,34 @@ Cloud setup instructions are versioned in `scripts/install-cloud.sh` and
 completed, saved and published. Work is committed directly to `Solid_first`
 and pushed after each completed change, as requested.
 
+Run a short MPC example on Windows (then use new directories for later runs):
+
+```powershell
+$env:NUMBA_NUM_THREADS="4"
+.\.venv\Scripts\python.exe -m event_mpc.closed_loop --output outputs/mpc-debug --intervals 3 --samples 8
+```
+
+For the declared full experiment suite and saved-data report:
+
+```powershell
+.\.venv\Scripts\python.exe -m event_mpc.experiments --output outputs/full-suite
+.\.venv\Scripts\python.exe -m event_mpc.report --suite outputs/full-suite
+```
+
+The full suite costs substantially more CPU time than the short example. Initial
+Numba compilation takes extra time; subsequent numerical evaluation is compiled.
+Sensor delay is causal, but measured optimizer time is not added to simulated
+actuation delay. These results are not a real-time implementation claim.
+
 `event_mpc/mechanics.py` contains reusable mechanics/integration,
 `metrics.py` postprocessing, `validation.py` numerical checks, and `__main__.py`
-the run/metrics/plot/validate commands. Only modules needed now exist.
+the mechanical run/metrics/plot/validate commands. `neurons.py`, `coupled.py`,
+`sensing.py`, `prediction.py`, `objective.py`, `optimization.py` and `closed_loop.py`
+separate the controller workflow; `fast_prediction.py` is checked against the
+independent SciPy reference. `experiments.py` runs configurations; `report.py`
+processes saved results and plots without integration.
 `configs/mechanical_demo.json` is explicitly a demonstration configuration;
-there are no paper-result configurations or full-controller claims yet.
+the full experiment plan is separately declared in `configs/experiment-suite.json`.
 
 The exact torque (2) is used. Printed energy equation (4) is retained unchanged
 as a separate diagnostic. Its finite-angle discrepancy with the exact dynamics

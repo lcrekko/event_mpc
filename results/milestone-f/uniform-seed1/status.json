@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "warmup_seconds": 0.0061726690000796225,
+  "wall_seconds": 69.0579053649999,
+  "status_codes": {
+    "0": "completed",
+    "1": "timeout",
+    "2": "angle_limit",
+    "3": "missed_detector",
+    "4": "invalid_turning_points",
+    "5": "grazing",
+    "6": "integration_failed"
+  }
+}
