@@ -1,0 +1,5 @@
+{
+  "nominal50_vs_first50_of_long200_actions_identical": true,
+  "compared_actions": 50,
+  "scope": "Same seed/configuration; optimizer wall times excluded; horizon K does not affect per-event search"
+}

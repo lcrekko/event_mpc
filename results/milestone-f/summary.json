@@ -250,6 +250,37 @@
       "evaluations": 25700,
       "fallback_count": 0,
       "wall_seconds": 66.58234376500013
+    },
+    {
+      "name": "long-200",
+      "status": "completed",
+      "completed_intervals": 200,
+      "requested_intervals": 200,
+      "seed": 1,
+      "method": "refinement",
+      "timing_rms_ms": 1.886442984760138,
+      "last10_timing_rms_ms": 2.4429372736935098,
+      "amplitude_rms_deg": 0.19807337356511223,
+      "last10_amplitude_rms_deg": 0.054447936608830516,
+      "absolute_work_uJ": 18.26578505366854,
+      "signed_work_uJ": 17.926498845646677,
+      "maximum_angle_deg": 5.0706164807830385,
+      "exact_energy_relative_residual": 1.751969622284092e-12,
+      "equation4_energy_relative_residual": 0.005957631188992929,
+      "sensor_timestamp_max_error_us": 0.021565965901970685,
+      "sensor_speed_max_relative_error": 2.2584552294486748e-05,
+      "sensor_delay_mean_us": 161.80757249859585,
+      "optimization_median_s": 1.1700085569998464,
+      "optimization_p95_s": 1.4359019841495857,
+      "optimization_max_s": 2.004592501999923,
+      "optimization_to_interval_p95": 28.723214658163588,
+      "invalid_candidate_fraction": 0.0,
+      "candidate_status_counts": {
+        "0": 102800
+      },
+      "evaluations": 102800,
+      "fallback_count": 0,
+      "wall_seconds": 272.0841889190001
     }
   ],
   "groups": {
@@ -295,7 +326,6 @@
     }
   },
   "unrun": [
-    "long-200",
     "mismatch-kappa",
     "mismatch-damping",
     "budget-64",
