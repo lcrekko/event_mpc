@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "event_index": 0,
+      "status": "completed",
+      "passed": true,
+      "errors": {
+        "reference_time_s": 8.528455719414296e-13,
+        "reference_extremum_rad": 4.781300355638507e-12,
+        "reference_work_J": 1.3105130970773984e-16,
+        "refinement_time_s": 1.3422873923474299e-12,
+        "refinement_extremum_rad": 1.1424333701270939e-12,
+        "refinement_work_J": 2.0152303478608894e-17
+      },
+      "maximums": {
+        "reference_time_s": 2e-07,
+        "reference_extremum_rad": 2e-06,
+        "reference_work_J": 2e-10,
+        "refinement_time_s": 2e-07,
+        "refinement_extremum_rad": 2e-06,
+        "refinement_work_J": 2e-10
+      },
+      "sequence": [
+        [
+          0.033457650984420204,
+          2.015073267077776,
+          1.4842959887197182
+        ],
+        [
+          0.022703081894000686,
+          1.9973920147181567,
+          1.486928083977014
+        ],
+        [
+          0.01265440191391353,
+          1.9832068672977323,
+          1.4308695908863285
+        ],
+        [
+          0.008596980677792857,
+          1.965978831965821,
+          1.4700793541612118
+        ]
+      ],
+      "initial_estimate": [
+        0.0,
+        5.5137,
+        -0.7739,
+        -0.4348,
+        -0.4461,
+        -2.3198,
+        -2.4326,
+        -2.1535
+      ],
+      "application_time": 0.0
+    },
+    {
+      "event_index": 25,
+      "status": "completed",
+      "passed": true,
+      "errors": {
+        "reference_time_s": 1.2394529846915248e-12,
+        "reference_extremum_rad": 1.069562494127041e-11,
+        "reference_work_J": 7.47245826108021e-16,
+        "refinement_time_s": 1.269206961751479e-12,
+        "refinement_extremum_rad": 1.171299168767348e-11,
+        "refinement_work_J": 4.12919284128721e-16
+      },
+      "maximums": {
+        "reference_time_s": 2e-07,
+        "reference_extremum_rad": 2e-06,
+        "reference_work_J": 2e-10,
+        "refinement_time_s": 2e-07,
+        "refinement_extremum_rad": 2e-06,
+        "refinement_work_J": 2e-10
+      },
+      "sequence": [
+        [
+          0.040213763334596565,
+          2.035219354028853,
+          1.5597153631410836
+        ],
+        [
+          0.0,
+          1.8582053676923205,
+          1.5887508456268402
+        ],
+        [
+          0.0019232632736238121,
+          1.9497162570416438,
+          1.6163868873550316
+        ],
+        [
+          0.0,
+          1.9945442060992327,
+          1.541612212860332
+        ]
+      ],
+      "initial_estimate": [
+        -0.0008725637188841443,
+        -5.469119379203518,
+        -3.220244105976815,
+        -2.731857302629589,
+        -0.9548198930158325,
+        -0.49709237973896314,
+        -1.2138532394648756,
+        -1.9402254882068484
+      ],
+      "application_time": 1.249366689051795
+    },
+    {
+      "event_index": 49,
+      "status": "completed",
+      "passed": true,
+      "errors": {
+        "reference_time_s": 6.679101716144942e-13,
+        "reference_extremum_rad": 2.097128026790074e-12,
+        "reference_work_J": 8.07118217518954e-14,
+        "refinement_time_s": 1.6973089600469393e-12,
+        "refinement_extremum_rad": 5.157374527442471e-12,
+        "refinement_work_J": 1.3112971319492007e-16
+      },
+      "maximums": {
+        "reference_time_s": 2e-07,
+        "reference_extremum_rad": 2e-06,
+        "reference_work_J": 2e-10,
+        "refinement_time_s": 2e-07,
+        "refinement_extremum_rad": 2e-06,
+        "refinement_work_J": 2e-10
+      },
+      "sequence": [
+        [
+          0.03388463600417985,
+          2.1886061263097787,
+          1.675111197961657
+        ],
+        [
+          0.029423282223632857,
+          2.195046176300794,
+          1.613761715717982
+        ],
+        [
+          0.00446504278167947,
+          2.160976566179324,
+          1.617102883355342
+        ],
+        [
+          0.005195036749577485,
+          2.1479785978924033,
+          1.5417107591989787
+        ]
+      ],
+      "initial_estimate": [
+        -0.0008725625635170855,
+        -5.470426680875949,
+        0.0047621724042126775,
+        0.23760698029406724,
+        -0.4057576680955387,
+        -2.5993494260901775,
+        -2.6795470610854517,
+        -2.1001841055984425
+      ],
+      "application_time": 2.4475331622741616
+    }
+  ],
+  "provenance": {
+    "head": "3456e16be52721fa9a22cc769e07a35a63d86357",
+    "git_status": "?? event_mpc/numerical_audit.py\n?? event_mpc/report.py\n?? results/milestone-f/\n?? tests/test_report.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "076a0fce622283c50b5049b87f67699b336449819cffb71f8a7f542226d80808",
+      "event_mpc/closed_loop.py": "269e0313053e7ca6d835d7451ad2add0cc9565829da8c5b72420b8c5522285c4",
+      "event_mpc/coupled.py": "7bb3cef7c2ceb37a8e7e71a9974ae761290f2e73b521ddac04a32da522da8f29",
+      "event_mpc/experiments.py": "9a2be6fdf20ff940ac4df2c39776ff10350f7b2ae7877f17ce08027338994869",
+      "event_mpc/fast_prediction.py": "8c5d476842a3e7f1c4545350fc20064318c6b0f6fc9d53ad96148d3c9161c01f",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/numerical_audit.py": "d72733709010f26201e004253832344ed0de4bab4de82107df5206bdb5f8904f",
+      "event_mpc/objective.py": "eeab1ec28b88cb4b31932217e6dff3328d94fdff51be93cca3b75bdd8b75e5a3",
+      "event_mpc/optimization.py": "a5e5705004633b84cf4f82d800630cea43c5042872e054c3baa6a46a7573cd13",
+      "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
+      "event_mpc/profile.py": "b69917aa5e0508127c435fc3a687bb92ca8c8b8d6669c8dfa1abd5dad03ae4ca",
+      "event_mpc/report.py": "30470cbcbd15e207c55cc072cb1d87ce7f017566853f71a95c496d243e572134",
+      "event_mpc/sensing.py": "11864fc55cfb9d4d73970b242e927a47290a7b974a764f8079003a2417519027",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": null,
+    "randomness": "none; deterministic integration"
+  },
+  "meaning": "Frozen selected sequences; no candidate reselection or closed-loop retuning"
+}

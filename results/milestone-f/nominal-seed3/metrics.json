@@ -1,0 +1,31 @@
+{
+  "name": "nominal-seed3",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 3,
+  "method": "refinement",
+  "timing_rms_ms": 0.43245837030106715,
+  "last10_timing_rms_ms": 0.42222892317029637,
+  "amplitude_rms_deg": 0.03306283576429695,
+  "last10_amplitude_rms_deg": 0.043228215792654325,
+  "absolute_work_uJ": 4.677079216124148,
+  "signed_work_uJ": 4.673121748753537,
+  "maximum_angle_deg": 5.061721663395796,
+  "exact_energy_relative_residual": 3.8171093869739284e-13,
+  "equation4_energy_relative_residual": 0.0016924123157928562,
+  "sensor_timestamp_max_error_us": 0.016016087567294335,
+  "sensor_speed_max_relative_error": 1.8793829823673675e-05,
+  "sensor_delay_mean_us": 158.5598941420048,
+  "optimization_median_s": 1.2286543744999108,
+  "optimization_p95_s": 1.2919629624501112,
+  "optimization_max_s": 1.321808783999586,
+  "optimization_to_interval_p95": 25.880424441951874,
+  "invalid_candidate_fraction": 0.0,
+  "candidate_status_counts": {
+    "0": 25700
+  },
+  "evaluations": 25700,
+  "fallback_count": 0,
+  "wall_seconds": 70.20416590200011
+}

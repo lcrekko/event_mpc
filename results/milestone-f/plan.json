@@ -1,0 +1,70 @@
+{
+  "purpose": "Milestone F evaluation of the literal paper objective with approved causal sensor delay; implementation choices explicitly documented",
+  "runs": [
+    {
+      "name": "nominal-seed1",
+      "seed": 1
+    },
+    {
+      "name": "nominal-seed2",
+      "seed": 2
+    },
+    {
+      "name": "nominal-seed3",
+      "seed": 3
+    },
+    {
+      "name": "fixed-nominal",
+      "seed": 1,
+      "method": "fixed"
+    },
+    {
+      "name": "uniform-seed1",
+      "seed": 1,
+      "method": "uniform",
+      "samples": 514
+    },
+    {
+      "name": "uniform-seed2",
+      "seed": 2,
+      "method": "uniform",
+      "samples": 514
+    },
+    {
+      "name": "uniform-seed3",
+      "seed": 3,
+      "method": "uniform",
+      "samples": 514
+    },
+    {
+      "name": "constant-seed1",
+      "seed": 1,
+      "constant_parameters": true
+    },
+    {
+      "name": "long-200",
+      "seed": 1,
+      "intervals": 200
+    },
+    {
+      "name": "mismatch-kappa",
+      "seed": 1,
+      "kappa_factor": 1.1
+    },
+    {
+      "name": "mismatch-damping",
+      "seed": 1,
+      "damping_factor": 1.25
+    },
+    {
+      "name": "budget-64",
+      "seed": 1,
+      "samples": 64
+    },
+    {
+      "name": "horizon-2",
+      "seed": 1,
+      "horizon": 2
+    }
+  ]
+}
