@@ -45,3 +45,7 @@ Unrun configurations: long-200, mismatch-kappa, mismatch-damping, budget-64, hor
 ![Long run](figures/long-run.png)
 
 ![Neurons](figures/neurons.png)
+
+![Sensing](figures/sensing.png)
+
+![Optimizer](figures/optimizer-history.png)

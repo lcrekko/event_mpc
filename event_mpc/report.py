@@ -128,6 +128,39 @@ def render_figures(suite,rows):
             axes[0].axhline(0,color='black',ls='--');axes[0].legend();axes[1].legend()
             axes[0].set_ylabel('Fast voltage');axes[1].set_ylabel('Slow voltage');axes[1].set_xlabel('Time [s]')
             fig.tight_layout();fig.savefig(figures/'neurons.png',dpi=160);plt.close(fig)
+    if (root/'milestone-c'/'coupled.npz').exists():
+        observations=read(root/'milestone-c'/'sensing.json')['observations']
+        detectors=read(root/'milestone-c'/'sensing.json')['detector_events']
+        with np.load(root/'milestone-c'/'coupled.npz') as data:
+            fig,axes=plt.subplots(3,1,figsize=(10,8))
+            axes[0].plot(data['time'],np.rad2deg(data['state'][0]));axes[0].set_ylabel('Mirror angle [deg]')
+            axes[0].set_xlabel('Time [s]')
+            if observations:
+                center=observations[0]['true_time'];mask=abs(data['time']-center)<.0005
+                axes[1].plot(data['time'][mask],np.rad2deg(data['state'][0,mask]))
+                for detector in detectors:
+                    if abs(detector['time']-center)<.0005:
+                        axes[1].axvline(detector['time'],ls='--',label=detector['detector'])
+                axes[1].axvline(center,color='black',label='Physical crossing')
+                axes[1].axvline(observations[0]['available_time'],color='red',ls=':',label='Feedback available')
+                axes[1].set_ylabel('Mirror angle [deg]');axes[1].set_xlabel('Time [s]');axes[1].legend()
+                axes[2].plot(np.arange(1,len(observations)+1),
+                              [o['omega']-o['true_omega'] for o in observations],marker='o')
+                axes[2].set_ylabel('Speed estimate error [rad/s]');axes[2].set_xlabel('Passage index')
+            fig.suptitle('Detector reconstruction and causal availability');fig.tight_layout()
+            fig.savefig(figures/'sensing.png',dpi=160);plt.close(fig)
+    if (suite/'nominal-seed1'/'search.npz').exists():
+        d=suite/'nominal-seed1';indices=[x for x in read(d/'search-index.json') if x['event_index']==0]
+        with np.load(d/'search.npz') as data:
+            minima=[];medians=[]
+            for entry in indices:
+                c=data['costs'][entry['offset']:entry['offset']+entry['count']]
+                finite=c[np.isfinite(c)];minima.append(np.min(finite)*1e6);medians.append(np.median(finite)*1e6)
+        fig,ax=plt.subplots(figsize=(8,4));k=np.arange(len(indices))
+        ax.plot(k,minima,'o-',label='Minimum valid cost');ax.plot(k,medians,'s--',label='Median valid cost')
+        ax.set_xticks(k,[x['label'] for x in indices]);ax.set_ylabel('Predicted objective [ms squared]')
+        ax.set_title('First nominal optimization: candidates and evaluated means');ax.legend();fig.tight_layout()
+        fig.savefig(figures/'optimizer-history.png',dpi=160);plt.close(fig)
 
 
 def make_report(suite,allow_incomplete=False):
@@ -170,6 +203,7 @@ def make_report(suite,allow_incomplete=False):
             '![Parameters](figures/nominal-parameters.png)','',
             '![Long run](figures/long-run.png)','',
             '![Neurons](figures/neurons.png)','']
+    lines+=['![Sensing](figures/sensing.png)','','![Optimizer](figures/optimizer-history.png)','']
     findings=['## Numerical findings','']
     baseline=next((r for r in rows if r['name']=='fixed-nominal'),None)
     if baseline and 'nominal' in grouped:
