@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "upcrossings_A": [
+    0.03183750674129001,
+    0.08183755242353655,
+    0.13183759536947512,
+    0.1818376383158572,
+    0.231837681262038,
+    0.28183772420843123,
+    0.33183776715460434,
+    0.3818378101009373,
+    0.43183785304729333,
+    0.4818378959934932
+  ],
+  "last_periods_s": [
+    0.050000042946393236,
+    0.05000004294617311,
+    0.05000004294633298,
+    0.050000042946356016,
+    0.05000004294619986
+  ],
+  "max_event_refinement_error_s": 2.583211422546583e-12,
+  "parameters": {
+    "tau_fast": 0.00017462978485610506,
+    "tau_slow": 0.0017462978485610506,
+    "tau_ultraslow": 0.017462978485610507,
+    "synaptic_gain": -1.0,
+    "external_current": -1.0,
+    "threshold": 0.0
+  },
+  "initial": [
+    -0.7739,
+    -0.4348,
+    -0.4461,
+    -2.3198,
+    -2.4326,
+    -2.1535
+  ],
+  "gains": [
+    2,
+    1.5
+  ],
+  "solver": {
+    "method": "RK45",
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "max_step": 8.7315e-05
+  },
+  "provenance": {
+    "head": "7a3aacc2e4951bbf18973381472e5e196c3dc86e",
+    "git_status": "?? docs/milestones-b-f.md\n?? event_mpc/neurons.py\n?? results/milestone-b/\n?? tests/test_neurons.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "d0528e51e83754b3a37a2eb519e95d07b67cee1cbc331d56ce850474c8a66248",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": null,
+    "randomness": "none; deterministic prescribed-current integration"
+  }
+}
