@@ -1,0 +1,38 @@
+test_causal_updates_best_candidate_and_warm_start (test_closed_loop.ClosedLoopTests.test_causal_updates_best_candidate_and_warm_start) ... ok
+test_no_truth_state_in_controller_interface (test_closed_loop.ClosedLoopTests.test_no_truth_state_in_controller_interface) ... ok
+test_coupled_pulses_and_energy (test_coupled.CoupledTests.test_coupled_pulses_and_energy) ... ok
+test_pairing_failures (test_coupled.CoupledTests.test_pairing_failures) ... ok
+test_sensor_reconstruction_and_causality (test_coupled.CoupledTests.test_sensor_reconstruction_and_causality) ... ok
+test_zero_and_refinement (test_coupled.CoupledTests.test_zero_and_refinement) ... ok
+test_backend_against_independent_scipy (test_fast_prediction.FastPredictionTests.test_backend_against_independent_scipy) ... ok
+test_invalid_status_and_refinement (test_fast_prediction.FastPredictionTests.test_invalid_status_and_refinement) ... ok
+test_energy_derivative_by_finite_difference (test_mechanics.MechanicalTests.test_energy_derivative_by_finite_difference) ... ok
+test_independent_numerical_validation (test_mechanics.MechanicalTests.test_independent_numerical_validation) ... ok
+test_invalid_inputs_rejected (test_mechanics.MechanicalTests.test_invalid_inputs_rejected) ... ok
+test_nonzero_current_switch_preserves_all_continuation_states (test_mechanics.MechanicalTests.test_nonzero_current_switch_preserves_all_continuation_states) ... ok
+test_operating_limit_stops_and_reports (test_mechanics.MechanicalTests.test_operating_limit_stops_and_reports) ... ok
+test_quiescent_state_has_no_transverse_events (test_mechanics.MechanicalTests.test_quiescent_state_has_no_transverse_events) ... ok
+test_switch_continuity_against_unforced_reference (test_mechanics.MechanicalTests.test_switch_continuity_against_unforced_reference) ... ok
+test_torque_formula_units_and_large_angle (test_mechanics.MechanicalTests.test_torque_formula_units_and_large_angle) ... ok
+test_exchange_symmetry (test_neurons.NeuronTests.test_exchange_symmetry) ... ok
+test_formula_and_state_order (test_neurons.NeuronTests.test_formula_and_state_order) ... ok
+test_rhythm_and_refinement (test_neurons.NeuronTests.test_rhythm_and_refinement) ... ok
+test_invalid_fallback_and_shift (test_optimization.OptimizationTests.test_invalid_fallback_and_shift) ... ok
+test_literal_timing_index_and_work (test_optimization.OptimizationTests.test_literal_timing_index_and_work) ... ok
+test_uniform_and_constant_parameter_options (test_optimization.OptimizationTests.test_uniform_and_constant_parameter_options) ... ok
+test_weighted_mean_and_best_valid (test_optimization.OptimizationTests.test_weighted_mean_and_best_valid) ... ok
+test_figure_quantities_preserve_units_and_timing_sign (test_paper_figures.PaperDataTests.test_figure_quantities_preserve_units_and_timing_sign) ... ok
+test_right_continuous_actions_and_switches_define_exact_torque (test_paper_figures.PaperDataTests.test_right_continuous_actions_and_switches_define_exact_torque) ... ok
+test_causal_horizon_and_all_states (test_prediction.PredictionTests.test_causal_horizon_and_all_states) ... ok
+test_event_continuation_matches_continuous (test_prediction.PredictionTests.test_event_continuation_matches_continuous) ... ok
+test_failures_are_not_outputs (test_prediction.PredictionTests.test_failures_are_not_outputs) ... ok
+test_metric_units_and_invalid_candidates (test_report.ReportTests.test_metric_units_and_invalid_candidates) ... ok
+test_truncated_status_is_retained (test_report.ReportTests.test_truncated_status_is_retained) ... ok
+test_identical_initial_half_swing_then_causal_uniform_update (test_startup_comparison.StartupComparisonTests.test_identical_initial_half_swing_then_causal_uniform_update) ... ok
+test_refinement_keeps_its_original_bound_validation (test_startup_comparison.StartupComparisonTests.test_refinement_keeps_its_original_bound_validation) ... ok
+test_user_bounds_are_per_search_and_do_not_change_old_defaults (test_startup_comparison.StartupComparisonTests.test_user_bounds_are_per_search_and_do_not_change_old_defaults) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 7.362s
+
+OK

@@ -1,0 +1,32 @@
+{
+  "name": "ec-mpc",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "uniform",
+  "timing_rms_ms": 0.6426331258992036,
+  "last10_timing_rms_ms": 0.545777194922319,
+  "amplitude_rms_deg": 0.10171508670986149,
+  "last10_amplitude_rms_deg": 0.09570716447027888,
+  "absolute_work_uJ": 4.931173640524763,
+  "signed_work_uJ": 4.575115328299175,
+  "maximum_angle_deg": 5.185735865821938,
+  "exact_energy_relative_residual": 4.25175833906731e-13,
+  "equation4_energy_relative_residual": 0.0014376185058305377,
+  "sensor_timestamp_max_error_us": 0.017065260454751652,
+  "sensor_speed_max_relative_error": 2.737446690720713e-05,
+  "sensor_delay_mean_us": 160.00151563778388,
+  "optimization_median_s": 1.1774644959996294,
+  "optimization_p95_s": 1.2331376726001053,
+  "optimization_max_s": 1.591650634999496,
+  "optimization_to_interval_p95": 24.621542183576366,
+  "invalid_candidate_fraction": 0.0009131694921983563,
+  "candidate_status_counts": {
+    "0": 25164,
+    "2": 23
+  },
+  "evaluations": 25187,
+  "fallback_count": 0,
+  "wall_seconds": 66.05201130200021
+}

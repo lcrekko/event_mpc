@@ -1,0 +1,124 @@
+{
+  "text_usetex": true,
+  "font": "Computer Modern Roman (native LaTeX serif)",
+  "figure_size_inches": {
+    "figure1": [
+      3.5,
+      5.5
+    ],
+    "figure2": [
+      3.5,
+      5.0
+    ],
+    "figure3": [
+      3.5,
+      3.7
+    ]
+  },
+  "tick_font_pt": 10,
+  "axis_label_pt": 12,
+  "legend_pt": 11,
+  "png_dpi": 600,
+  "formats": [
+    "PDF",
+    "SVG",
+    "PNG"
+  ],
+  "metrics": {
+    "ec-mpc": {
+      "name": "ec-mpc",
+      "status": "completed",
+      "completed_intervals": 50,
+      "requested_intervals": 50,
+      "seed": 1,
+      "method": "uniform",
+      "timing_rms_ms": 0.6426331258992036,
+      "last10_timing_rms_ms": 0.545777194922319,
+      "amplitude_rms_deg": 0.10171508670986149,
+      "last10_amplitude_rms_deg": 0.09570716447027888,
+      "absolute_work_uJ": 4.931173640524763,
+      "signed_work_uJ": 4.575115328299175,
+      "maximum_angle_deg": 5.185735865821938,
+      "exact_energy_relative_residual": 4.25175833906731e-13,
+      "equation4_energy_relative_residual": 0.0014376185058305377,
+      "sensor_timestamp_max_error_us": 0.017065260454751652,
+      "sensor_speed_max_relative_error": 2.737446690720713e-05,
+      "sensor_delay_mean_us": 160.00151563778388,
+      "optimization_median_s": 1.1774644959996294,
+      "optimization_p95_s": 1.2331376726001053,
+      "optimization_max_s": 1.591650634999496,
+      "optimization_to_interval_p95": 24.621542183576366,
+      "invalid_candidate_fraction": 0.0009131694921983563,
+      "candidate_status_counts": {
+        "0": 25164,
+        "2": 23
+      },
+      "evaluations": 25187,
+      "fallback_count": 0,
+      "wall_seconds": 66.05201130200021
+    },
+    "nominal-control": {
+      "name": "nominal-control",
+      "status": "completed",
+      "completed_intervals": 50,
+      "requested_intervals": 50,
+      "seed": 1,
+      "method": "fixed",
+      "timing_rms_ms": 18.260070732309575,
+      "last10_timing_rms_ms": 28.35013297879362,
+      "amplitude_rms_deg": 2.698445930924323,
+      "last10_amplitude_rms_deg": 3.7484548064309196,
+      "absolute_work_uJ": 2.0040812501551892,
+      "signed_work_uJ": 0.002099479535304283,
+      "maximum_angle_deg": 4.976167117244926,
+      "exact_energy_relative_residual": 1.3234503348997198e-13,
+      "equation4_energy_relative_residual": 1.6543885988173073e-05,
+      "sensor_timestamp_max_error_us": 0.3366191032583288,
+      "sensor_speed_max_relative_error": 0.00034898101153096325,
+      "sensor_delay_mean_us": 381.60839637887983,
+      "optimization_median_s": 0.006183017500006827,
+      "optimization_p95_s": 0.006730381250008577,
+      "optimization_max_s": 0.010643597999660415,
+      "optimization_to_interval_p95": 0.1367183607557629,
+      "invalid_candidate_fraction": 0.0,
+      "candidate_status_counts": {
+        "0": 50
+      },
+      "evaluations": 50,
+      "fallback_count": 0,
+      "wall_seconds": 8.082707718000165
+    }
+  },
+  "provenance": {
+    "head": "c766fce8f5f2a1c0f37c67f8b422ca58c66a5ee0",
+    "git_status": "M  README.md\nA  configs/startup-comparison.json\nM  docs/cloud-start.md\nA  docs/startup-comparison.md\nM  event_mpc/closed_loop.py\nM  event_mpc/optimization.py\nAM event_mpc/paper_figures.py\nA  event_mpc/startup_comparison.py\nA  results/startup-comparison/README.md\nA  results/startup-comparison/ec-mpc/actions.json\nA  results/startup-comparison/ec-mpc/events.json\nA  results/startup-comparison/ec-mpc/metadata.json\nA  results/startup-comparison/ec-mpc/metrics.json\nA  results/startup-comparison/ec-mpc/search-index.json\nA  results/startup-comparison/ec-mpc/search.npz\nA  results/startup-comparison/ec-mpc/status.json\nA  results/startup-comparison/ec-mpc/trajectory.npz\nA  results/startup-comparison/execution.log\nAM results/startup-comparison/figures/figure1-performance.pdf\nA  results/startup-comparison/figures/figure1-performance.png\nAM results/startup-comparison/figures/figure1-performance.svg\nAM results/startup-comparison/figures/figure2-parameters.pdf\nA  results/startup-comparison/figures/figure2-parameters.png\nAM results/startup-comparison/figures/figure2-parameters.svg\nAM results/startup-comparison/figures/figure3-actuation.pdf\nA  results/startup-comparison/figures/figure3-actuation.png\nAM results/startup-comparison/figures/figure3-actuation.svg\nA  results/startup-comparison/integrity.json\nA  results/startup-comparison/nominal-control/actions.json\nA  results/startup-comparison/nominal-control/events.json\nA  results/startup-comparison/nominal-control/metadata.json\nA  results/startup-comparison/nominal-control/metrics.json\nA  results/startup-comparison/nominal-control/search-index.json\nA  results/startup-comparison/nominal-control/search.npz\nA  results/startup-comparison/nominal-control/status.json\nA  results/startup-comparison/nominal-control/trajectory.npz\nA  results/startup-comparison/pdf-fonts.txt\nA  results/startup-comparison/performance.csv\nA  results/startup-comparison/plan.json\nA  results/startup-comparison/rendering.json\nA  results/startup-comparison/tests.txt\nA  tests/test_paper_figures.py\nA  tests/test_startup_comparison.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "076a0fce622283c50b5049b87f67699b336449819cffb71f8a7f542226d80808",
+      "event_mpc/closed_loop.py": "463cf646725986a8f61a84ff493c92ca99e560b8c74803ac8c4ab2513e639600",
+      "event_mpc/coupled.py": "7bb3cef7c2ceb37a8e7e71a9974ae761290f2e73b521ddac04a32da522da8f29",
+      "event_mpc/evidence.py": "2bb14b206bcdbf843c4518d1c839f152b07f5809430f0c8006f5bb043a53dea3",
+      "event_mpc/experiments.py": "9a2be6fdf20ff940ac4df2c39776ff10350f7b2ae7877f17ce08027338994869",
+      "event_mpc/fast_prediction.py": "8c5d476842a3e7f1c4545350fc20064318c6b0f6fc9d53ad96148d3c9161c01f",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/numerical_audit.py": "c5a10cdc07dac292afeaaddfe556b072df7eb34009ddf2ee3d4bed7f37774745",
+      "event_mpc/objective.py": "eeab1ec28b88cb4b31932217e6dff3328d94fdff51be93cca3b75bdd8b75e5a3",
+      "event_mpc/optimization.py": "aeadd549b9ca67f074c8b13ea76b014b3db1ba806337086bb69f3ddffbc6c1f3",
+      "event_mpc/paper_figures.py": "cb7398f019bede19d93ac124c16e36695b30c03c12cb788c1d8a572f9457c4c3",
+      "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
+      "event_mpc/profile.py": "b69917aa5e0508127c435fc3a687bb92ca8c8b8d6669c8dfa1abd5dad03ae4ca",
+      "event_mpc/report.py": "1fc71232d9d7ac6ef4fc841a387ab2cd1628c5b9d9d07c35f910230f8c991d11",
+      "event_mpc/sensing.py": "11864fc55cfb9d4d73970b242e927a47290a7b974a764f8079003a2417519027",
+      "event_mpc/startup_comparison.py": "00af39d0bbbb0cb4d41b415a9b1cfecb43df143ba55e709572c34c1f4c133e7b",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": null,
+    "randomness": "none; deterministic integration"
+  }
+}

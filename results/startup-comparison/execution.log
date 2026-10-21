@@ -1,0 +1,44 @@
+nominal-control: 10/50 intervals
+nominal-control: 20/50 intervals
+nominal-control: 30/50 intervals
+nominal-control: 40/50 intervals
+nominal-control: 50/50 intervals
+ec-mpc: 10/50 intervals
+ec-mpc: 20/50 intervals
+ec-mpc: 30/50 intervals
+ec-mpc: 40/50 intervals
+ec-mpc: 50/50 intervals
+{
+  "nominal-control": {
+    "status": "completed",
+    "completed_intervals": 50,
+    "requested_intervals": 50,
+    "warmup_seconds": 0.14058853300048213,
+    "wall_seconds": 8.082707718000165,
+    "status_codes": {
+      "0": "completed",
+      "1": "timeout",
+      "2": "angle_limit",
+      "3": "missed_detector",
+      "4": "invalid_turning_points",
+      "5": "grazing",
+      "6": "integration_failed"
+    }
+  },
+  "ec-mpc": {
+    "status": "completed",
+    "completed_intervals": 50,
+    "requested_intervals": 50,
+    "warmup_seconds": 0.006043888999556657,
+    "wall_seconds": 66.05201130200021,
+    "status_codes": {
+      "0": "completed",
+      "1": "timeout",
+      "2": "angle_limit",
+      "3": "missed_detector",
+      "4": "invalid_turning_points",
+      "5": "grazing",
+      "6": "integration_failed"
+    }
+  }
+}

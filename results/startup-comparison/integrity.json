@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "runs": 2,
+  "completed_intervals_per_run": 50,
+  "initial_theta": [
+    0.05,
+    1.5,
+    2.0
+  ],
+  "identical_initial_physical_states": true,
+  "identical_first_half_swing": true,
+  "causal_application_order": true,
+  "user_bounds_respected": true,
+  "fixed_parameters_unchanged": true,
+  "mpc_parameters_changed": true,
+  "mpc_candidate_evaluations": 25187,
+  "rejected_candidates": 23,
+  "figure_files": {
+    "figure2-parameters.svg": 33248,
+    "figure3-actuation.png": 268917,
+    "figure1-performance.svg": 48742,
+    "figure2-parameters.pdf": 202007,
+    "figure1-performance.png": 329334,
+    "figure2-parameters.png": 112614,
+    "figure3-actuation.pdf": 756247,
+    "figure3-actuation.svg": 1408554,
+    "figure1-performance.pdf": 268328
+  },
+  "svg_xml_valid": true
+}

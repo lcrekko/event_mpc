@@ -1,0 +1,32 @@
+{
+  "purpose": "User-requested uniform MPC versus a fixed, deliberately untuned HCO",
+  "initial_theta": [
+    0.05,
+    1.5,
+    2.0
+  ],
+  "initial_state_policy": "Preserve manuscript mechanical and six neuronal initial states; no recalibration or reset",
+  "intervals": 50,
+  "seed": 1,
+  "samples": 514,
+  "horizon": 4,
+  "mpc_startup_intervals": 1,
+  "search_lower": [
+    0.0,
+    1.5,
+    1.0
+  ],
+  "search_upper": [
+    0.12,
+    2.5,
+    2.0
+  ],
+  "startup_policy": "Both use the specified theta during the first half-swing; MPC optimizes only once the first complete detector pair is available",
+  "bounds_note": "User-authorized gain bounds [1.5,2.5] x [1,2], containing the initial gains. This overrides the paper's narrower bounds only for this new comparison.",
+  "performance_plot": {
+    "amplitude": "Absolute signed half-swing extremum, in degrees; reference magnitude 5 degrees",
+    "crossing": "Crossing-time error relative to event_index*0.05 seconds, displayed in milliseconds",
+    "energy": "Absolute mechanical energy exchange integral per half-swing, in microjoules",
+    "x_axis": "Physical simulated time in seconds"
+  }
+}

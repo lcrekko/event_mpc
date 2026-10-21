@@ -1,0 +1,31 @@
+{
+  "name": "nominal-control",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "fixed",
+  "timing_rms_ms": 18.260070732309575,
+  "last10_timing_rms_ms": 28.35013297879362,
+  "amplitude_rms_deg": 2.698445930924323,
+  "last10_amplitude_rms_deg": 3.7484548064309196,
+  "absolute_work_uJ": 2.0040812501551892,
+  "signed_work_uJ": 0.002099479535304283,
+  "maximum_angle_deg": 4.976167117244926,
+  "exact_energy_relative_residual": 1.3234503348997198e-13,
+  "equation4_energy_relative_residual": 1.6543885988173073e-05,
+  "sensor_timestamp_max_error_us": 0.3366191032583288,
+  "sensor_speed_max_relative_error": 0.00034898101153096325,
+  "sensor_delay_mean_us": 381.60839637887983,
+  "optimization_median_s": 0.006183017500006827,
+  "optimization_p95_s": 0.006730381250008577,
+  "optimization_max_s": 0.010643597999660415,
+  "optimization_to_interval_p95": 0.1367183607557629,
+  "invalid_candidate_fraction": 0.0,
+  "candidate_status_counts": {
+    "0": 50
+  },
+  "evaluations": 50,
+  "fallback_count": 0,
+  "wall_seconds": 8.082707718000165
+}

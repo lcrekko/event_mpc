@@ -53,6 +53,18 @@ rerunning numerical integration:
 The declared full suite is `python -m event_mpc.experiments --output outputs/<new-suite>`.
 It runs paper-scale CPU workloads and must not be repeated merely as startup.
 
+Latest user-requested two-controller experiment is separately recorded in
+configs/startup-comparison.json and results/startup-comparison. It uses initial
+theta=[.05,1.5,2], user gain bounds [1.5,2.5] x [1,2], an identical first half-swing,
+then uniform seed1 MPC versus fixed control. Old defaults/results are unchanged.
+See docs/startup-comparison.md for the timing interpretation and physical metrics.
+Regenerate its three publication figures without integration using
+`python -m event_mpc.paper_figures --comparison results/startup-comparison` with
+the venv interpreter. True LaTeX rendering uses latex and pdftocairo plus native
+CM fonts already verified in this cloud machine; explicit --mathtext is the
+documented fallback on machines without TeX. Do not rerun parallel benchmarks
+merely to explain the old runtime; the existing evaluator already uses threads.
+
 The user explicitly decided to retain exact sine torque (2) and leave printed
 (4) unchanged. Both energy diagnostics are implemented; the finite-angle
 residual of (4) is reported separately. Do not ask the resolved question again.

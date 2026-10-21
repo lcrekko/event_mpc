@@ -15,12 +15,19 @@ class SearchSettings:
     sigma: tuple=(.012,.04,.04)
     method: str='refinement'
     constant_parameters: bool=False
+    lower: tuple=(0.,1.8,1.3)
+    upper: tuple=(.12,2.2,1.7)
 
     def __post_init__(self):
         if self.horizon<1 or self.samples<2 or self.rounds<1 or self.temperature<=0:
             raise ValueError('Positive horizon/rounds/temperature, >=2 samples required')
         if self.method not in ('refinement','uniform','fixed'):raise ValueError('Unknown search')
         if len(self.sigma)!=3 or min(self.sigma)<0:raise ValueError('Three nonnegative sampling deviations required')
+        lo=np.asarray(self.lower);hi=np.asarray(self.upper)
+        if (lo.shape!=(3,) or hi.shape!=(3,) or not np.all(np.isfinite(lo))
+                or not np.all(np.isfinite(hi)) or np.any(lo>=hi)
+                or lo[0]<0 or np.any(lo[1:]<=0)):
+            raise ValueError('Finite ordered bounds for current and positive gains required')
 
 
 @dataclass
@@ -45,11 +52,15 @@ def optimize(evaluate,rng,settings=None,nominal=None,previous_theta=None):
     if no evaluation is valid use the documented zero-current/retained-gain action.
     """
     s=settings or SearchSettings()
+    lower=np.asarray(s.lower);upper=np.asarray(s.upper)
     prior=NOMINAL_THETA if previous_theta is None else np.asarray(previous_theta)
     mean=np.tile(prior,(s.horizon,1)) if nominal is None else np.asarray(nominal).copy()
     if mean.shape!=(s.horizon,3) or not np.all(np.isfinite(mean)):
         raise ValueError('Finite N by 3 nominal sequence required')
-    if np.any(mean<LOWER) or np.any(mean>UPPER):raise ValueError('Nominal sequence outside bounds')
+    # Uniform shooting does not sample around its nominal/previous parameters;
+    # a user-specified startup or fixed baseline may be outside the search box.
+    if s.method=='refinement' and (np.any(mean<lower) or np.any(mean>upper)):
+        raise ValueError('Nominal sequence outside bounds')
     if s.constant_parameters:mean=np.tile(mean[0],(s.horizon,1))
     best=None;best_cost=float('inf');history=[]
 
@@ -67,7 +78,7 @@ def optimize(evaluate,rng,settings=None,nominal=None,previous_theta=None):
     if s.method=='fixed':assess(mean[None],'fixed')
     elif s.method=='uniform':
         shape=(s.samples,1 if s.constant_parameters else s.horizon,3)
-        candidates=rng.uniform(LOWER,UPPER,size=shape)
+        candidates=rng.uniform(lower,upper,size=shape)
         if s.constant_parameters:candidates=np.repeat(candidates,s.horizon,axis=1)
         assess(candidates,'uniform')
     else:
@@ -75,7 +86,7 @@ def optimize(evaluate,rng,settings=None,nominal=None,previous_theta=None):
             shape=(s.samples-1,1 if s.constant_parameters else s.horizon,3)
             noise=rng.normal(size=shape)*np.array(s.sigma)
             if s.constant_parameters:noise=np.repeat(noise,s.horizon,axis=1)
-            candidates=np.concatenate([mean[None],np.clip(mean+noise,LOWER,UPPER)],axis=0)
+            candidates=np.concatenate([mean[None],np.clip(mean+noise,lower,upper)],axis=0)
             costs,valid=assess(candidates,f'round_{r}')
             if np.any(valid):
                 rho=np.min(costs[valid]);weights=np.exp(-(costs[valid]-rho)/s.temperature)

@@ -35,23 +35,31 @@ def estimate_at_availability(observation,known_neurons,known_time,old_theta,p,n,
 
 
 def run_closed_loop(output,intervals=50,seed=1,search=None,plant_parameters=None,
-                    predictor_parameters=None,integration=None,initial=None,description='nominal'):
+                    predictor_parameters=None,integration=None,initial=None,description='nominal',
+                    initial_theta=None,startup_intervals=0):
     from .__main__ import write_json,provenance
     from importlib.metadata import version
-    output=Path(output);output.mkdir(parents=True,exist_ok=False)
     if intervals<1:raise ValueError('Positive interval count required')
+    if not isinstance(startup_intervals,int) or not 0<=startup_intervals<=intervals:
+        raise ValueError('Startup intervals must be an integer between zero and intervals')
     s=search or SearchSettings();settings=integration or IntegrationSettings()
     plant=plant_parameters or MechanicalParameters();predictor=predictor_parameters or MechanicalParameters()
     neurons=NeuronParameters();objective=Objective();pa,na=parameter_arrays(predictor,neurons)
     x=INITIAL_STATE.copy() if initial is None else np.asarray(initial,dtype=float).copy()
-    if x.shape!=(8,):raise ValueError('Eight-state initial condition required')
+    if x.shape!=(8,) or not np.all(np.isfinite(x)):raise ValueError('Finite eight-state initial condition required')
+    old_theta=NOMINAL_THETA.copy() if initial_theta is None else np.asarray(initial_theta,dtype=float).copy()
+    if (old_theta.shape!=(3,) or not np.all(np.isfinite(old_theta)) or
+            not 0<=old_theta[0]<=min(plant.current_limit,predictor.current_limit) or np.any(old_theta[1:]<=0)):
+        raise ValueError('Finite initial theta, admissible current and positive gains required')
+    output=Path(output);output.mkdir(parents=True,exist_ok=False)
     plant_state=np.r_[x,np.zeros(4)];estimate=x.copy();known_neurons=x[2:].copy();known_time=0.
-    time=0.;crossing=0.;old_theta=NOMINAL_THETA.copy();mean=None;rng=np.random.default_rng(seed);prefix_work=0.
+    time=0.;crossing=0.;mean=None;rng=np.random.default_rng(seed);prefix_work=0.
     pair=DetectorPairing();ts=[];ys=[];actions=[];events=[];detections=[];switches=[]
     candidates=[];costs=[];statuses=[];diagnostic_index=[];offset=0;last_cross_work=0.
     metadata={'description':description,'intervals':intervals,'seed':seed,'search':asdict(s),
               'plant':asdict(plant),'predictor':asdict(predictor),'neurons':asdict(neurons),
               'integration':asdict(settings),'initial_state':x.tolist(),
+              'initial_theta':old_theta.tolist(),'startup_intervals':startup_intervals,
               'objective':asdict(objective),'objective_weights':objective.array().tolist(),
               'information':'detector timestamps plus owned circuit state; no measured plant state',
               'delay':'sensing delay causal; optimizer wall time measured but not injected into simulated time',
@@ -67,11 +75,15 @@ def run_closed_loop(output,intervals=50,seed=1,search=None,plant_parameters=None
             values,codes=batch_cost(estimate,sequences,time,crossing,k,pa,na,objective.array(),
                                     settings.max_step,settings.rtol,settings.timeout)
             return values+objective.array()[3]*prefix_work,codes
-        before=perf_counter();selection=optimize(evaluate,rng,s,mean,old_theta)
+        startup=k<startup_intervals
+        active_search=SearchSettings(horizon=s.horizon,method='fixed',lower=s.lower,upper=s.upper) if startup else s
+        before=perf_counter();selection=optimize(evaluate,rng,active_search,
+                                                 None if startup else mean,old_theta)
         optimization_seconds=perf_counter()-before
         theta=selection.sequence[0].copy()
         actions.append({'event_index':k,'estimated_crossing':crossing,'applied_time':time,
                         'theta':theta.tolist(),'estimate':estimate.tolist(),'fallback':selection.fallback,
+                        'startup':startup,
                         'cost':None if not np.isfinite(selection.cost) else selection.cost,
                         'optimization_seconds':optimization_seconds})
         for d in selection.diagnostics:

@@ -1,0 +1,134 @@
+{
+  "description": "User-requested uniform MPC versus a fixed, deliberately untuned HCO",
+  "intervals": 50,
+  "seed": 1,
+  "search": {
+    "horizon": 4,
+    "samples": 514,
+    "rounds": 2,
+    "temperature": 0.00025,
+    "sigma": [
+      0.012,
+      0.04,
+      0.04
+    ],
+    "method": "fixed",
+    "constant_parameters": false,
+    "lower": [
+      0.0,
+      1.5,
+      1.0
+    ],
+    "upper": [
+      0.12,
+      2.5,
+      2.0
+    ]
+  },
+  "plant": {
+    "inertia": 1e-07,
+    "natural_frequency": 9.9,
+    "damping_ratio": 0.01,
+    "kappa": 0.030854,
+    "current_limit": 0.12,
+    "angle_limit": 0.17453292519943295
+  },
+  "predictor": {
+    "inertia": 1e-07,
+    "natural_frequency": 9.9,
+    "damping_ratio": 0.01,
+    "kappa": 0.030854,
+    "current_limit": 0.12,
+    "angle_limit": 0.17453292519943295
+  },
+  "neurons": {
+    "tau_fast": 0.00017462978485610506,
+    "tau_slow": 0.0017462978485610506,
+    "tau_ultraslow": 0.017462978485610507,
+    "synaptic_gain": -1.0,
+    "external_current": -1.0,
+    "threshold": 0.0
+  },
+  "integration": {
+    "rtol": 1e-07,
+    "atol": [
+      1e-10,
+      1e-08,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-15,
+      1e-15,
+      1e-15,
+      1e-15
+    ],
+    "max_step": 8.7315e-05,
+    "timeout": 0.1
+  },
+  "initial_state": [
+    0.0,
+    5.5137,
+    -0.7739,
+    -0.4348,
+    -0.4461,
+    -2.3198,
+    -2.4326,
+    -2.1535
+  ],
+  "initial_theta": [
+    0.05,
+    1.5,
+    2.0
+  ],
+  "startup_intervals": 0,
+  "objective": {
+    "period": 0.05,
+    "amplitude": 0.08726646259971647,
+    "gamma": 1.0
+  },
+  "objective_weights": [
+    0.05,
+    0.08726646259971647,
+    0.3282806350011745,
+    84.84282855111023,
+    1.0
+  ],
+  "information": "detector timestamps plus owned circuit state; no measured plant state",
+  "delay": "sensing delay causal; optimizer wall time measured but not injected into simulated time",
+  "provenance": {
+    "head": "c766fce8f5f2a1c0f37c67f8b422ca58c66a5ee0",
+    "git_status": "M event_mpc/closed_loop.py\n M event_mpc/optimization.py\n?? configs/startup-comparison.json\n?? event_mpc/startup_comparison.py\n?? results/startup-comparison/\n?? tests/test_startup_comparison.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "076a0fce622283c50b5049b87f67699b336449819cffb71f8a7f542226d80808",
+      "event_mpc/closed_loop.py": "463cf646725986a8f61a84ff493c92ca99e560b8c74803ac8c4ab2513e639600",
+      "event_mpc/coupled.py": "7bb3cef7c2ceb37a8e7e71a9974ae761290f2e73b521ddac04a32da522da8f29",
+      "event_mpc/evidence.py": "2bb14b206bcdbf843c4518d1c839f152b07f5809430f0c8006f5bb043a53dea3",
+      "event_mpc/experiments.py": "9a2be6fdf20ff940ac4df2c39776ff10350f7b2ae7877f17ce08027338994869",
+      "event_mpc/fast_prediction.py": "8c5d476842a3e7f1c4545350fc20064318c6b0f6fc9d53ad96148d3c9161c01f",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/numerical_audit.py": "c5a10cdc07dac292afeaaddfe556b072df7eb34009ddf2ee3d4bed7f37774745",
+      "event_mpc/objective.py": "eeab1ec28b88cb4b31932217e6dff3328d94fdff51be93cca3b75bdd8b75e5a3",
+      "event_mpc/optimization.py": "aeadd549b9ca67f074c8b13ea76b014b3db1ba806337086bb69f3ddffbc6c1f3",
+      "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
+      "event_mpc/profile.py": "b69917aa5e0508127c435fc3a687bb92ca8c8b8d6669c8dfa1abd5dad03ae4ca",
+      "event_mpc/report.py": "1fc71232d9d7ac6ef4fc841a387ab2cd1628c5b9d9d07c35f910230f8c991d11",
+      "event_mpc/sensing.py": "11864fc55cfb9d4d73970b242e927a47290a7b974a764f8079003a2417519027",
+      "event_mpc/startup_comparison.py": "00af39d0bbbb0cb4d41b415a9b1cfecb43df143ba55e709572c34c1f4c133e7b",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": 1,
+    "randomness": "NumPy default_rng PCG64; candidate draws generated before parallel evaluation"
+  },
+  "numba": "0.68.0",
+  "llvmlite": "0.50.0"
+}

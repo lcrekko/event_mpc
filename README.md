@@ -6,6 +6,12 @@ sensitivity and mismatch experiments.
 The manuscript is in `paper/`; scientific scope is described in AGENTS.md and
 CODEX_SETUP.md. See [model and validation conventions](docs/milestone-a.md).
 
+Latest requested comparison: uniform MPC versus fixed I0=50mA, slow=1.5,
+ultraslow=2, with user gain bounds [1.5,2.5] x [1,2]. See the
+[new experiment and timing explanation](docs/startup-comparison.md) and
+[three publication figures](results/startup-comparison/README.md).
+Earlier Milestone F results are preserved separately.
+
 For B–F see [implementation/validation decisions](docs/milestones-b-f.md),
 [experiment plan](docs/experiment-plan.md), and the
 [saved scientific report](results/milestone-f/REPORT.md). A Chinese
