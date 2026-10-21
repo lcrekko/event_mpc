@@ -1,0 +1,31 @@
+{
+  "name": "horizon-2",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "refinement",
+  "timing_rms_ms": 2.6747562887201646,
+  "last10_timing_rms_ms": 4.142044019912424,
+  "amplitude_rms_deg": 1.4417387667401227,
+  "last10_amplitude_rms_deg": 2.1204380492152306,
+  "absolute_work_uJ": 1.6977101230005986,
+  "signed_work_uJ": 1.631928733886136,
+  "maximum_angle_deg": 5.000019245371012,
+  "exact_energy_relative_residual": 2.393355447744967e-13,
+  "equation4_energy_relative_residual": 0.0004725717085953123,
+  "sensor_timestamp_max_error_us": 0.05840123051825685,
+  "sensor_speed_max_relative_error": 6.058605874021863e-05,
+  "sensor_delay_mean_us": 221.64140292237218,
+  "optimization_median_s": 0.6095793470001354,
+  "optimization_p95_s": 0.6350248986500902,
+  "optimization_max_s": 0.6446159970000735,
+  "optimization_to_interval_p95": 12.737448037905457,
+  "invalid_candidate_fraction": 0.0,
+  "candidate_status_counts": {
+    "0": 25700
+  },
+  "evaluations": 25700,
+  "fallback_count": 0,
+  "wall_seconds": 39.24204266400011
+}

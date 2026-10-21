@@ -1,0 +1,107 @@
+Starting nominal-seed1
+nominal-seed1: 10/50 intervals
+nominal-seed1: 20/50 intervals
+nominal-seed1: 30/50 intervals
+nominal-seed1: 40/50 intervals
+nominal-seed1: 50/50 intervals
+nominal-seed1 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.16582066199998735, "wall_seconds": 72.16250019499967, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting nominal-seed2
+nominal-seed2: 10/50 intervals
+nominal-seed2: 20/50 intervals
+nominal-seed2: 30/50 intervals
+nominal-seed2: 40/50 intervals
+nominal-seed2: 50/50 intervals
+nominal-seed2 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.006237793999844143, "wall_seconds": 71.69499673099972, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting nominal-seed3
+nominal-seed3: 10/50 intervals
+nominal-seed3: 20/50 intervals
+nominal-seed3: 30/50 intervals
+nominal-seed3: 40/50 intervals
+nominal-seed3: 50/50 intervals
+nominal-seed3 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.006689803999961441, "wall_seconds": 70.20416590200011, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting fixed-nominal
+fixed-nominal: 10/50 intervals
+fixed-nominal: 20/50 intervals
+fixed-nominal: 30/50 intervals
+fixed-nominal: 40/50 intervals
+fixed-nominal: 50/50 intervals
+fixed-nominal {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.005882205000034446, "wall_seconds": 8.887161287000254, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting uniform-seed1
+uniform-seed1: 10/50 intervals
+uniform-seed1: 20/50 intervals
+uniform-seed1: 30/50 intervals
+uniform-seed1: 40/50 intervals
+uniform-seed1: 50/50 intervals
+uniform-seed1 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.0061726690000796225, "wall_seconds": 69.0579053649999, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting uniform-seed2
+uniform-seed2: 10/50 intervals
+uniform-seed2: 20/50 intervals
+uniform-seed2: 30/50 intervals
+uniform-seed2: 40/50 intervals
+uniform-seed2: 50/50 intervals
+uniform-seed2 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.0056129489998966164, "wall_seconds": 66.83354731100007, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting uniform-seed3
+uniform-seed3: 10/50 intervals
+uniform-seed3: 20/50 intervals
+uniform-seed3: 30/50 intervals
+uniform-seed3: 40/50 intervals
+uniform-seed3: 50/50 intervals
+uniform-seed3 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.0054490260004058655, "wall_seconds": 67.42344368800013, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting constant-seed1
+constant-seed1: 10/50 intervals
+constant-seed1: 20/50 intervals
+constant-seed1: 30/50 intervals
+constant-seed1: 40/50 intervals
+constant-seed1: 50/50 intervals
+constant-seed1 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.005249336999895604, "wall_seconds": 66.58234376500013, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting long-200
+long-200: 10/200 intervals
+long-200: 20/200 intervals
+long-200: 30/200 intervals
+long-200: 40/200 intervals
+long-200: 50/200 intervals
+long-200: 60/200 intervals
+long-200: 70/200 intervals
+long-200: 80/200 intervals
+long-200: 90/200 intervals
+long-200: 100/200 intervals
+long-200: 110/200 intervals
+long-200: 120/200 intervals
+long-200: 130/200 intervals
+long-200: 140/200 intervals
+long-200: 150/200 intervals
+long-200: 160/200 intervals
+long-200: 170/200 intervals
+long-200: 180/200 intervals
+long-200: 190/200 intervals
+long-200: 200/200 intervals
+long-200 {"status": "completed", "completed_intervals": 200, "requested_intervals": 200, "warmup_seconds": 0.005714325000099052, "wall_seconds": 272.0841889190001, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting mismatch-kappa
+mismatch-kappa: 10/50 intervals
+mismatch-kappa: 20/50 intervals
+mismatch-kappa: 30/50 intervals
+mismatch-kappa: 40/50 intervals
+mismatch-kappa: 50/50 intervals
+mismatch-kappa {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.005399986000156787, "wall_seconds": 70.9864858750002, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting mismatch-damping
+mismatch-damping: 10/50 intervals
+mismatch-damping: 20/50 intervals
+mismatch-damping: 30/50 intervals
+mismatch-damping: 40/50 intervals
+mismatch-damping: 50/50 intervals
+mismatch-damping {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.005706019000172091, "wall_seconds": 76.47426195700018, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting budget-64
+budget-64: 10/50 intervals
+budget-64: 20/50 intervals
+budget-64: 30/50 intervals
+budget-64: 40/50 intervals
+budget-64: 50/50 intervals
+budget-64 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.005879219000235025, "wall_seconds": 24.957917395000095, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Starting horizon-2
+horizon-2: 10/50 intervals
+horizon-2: 20/50 intervals
+horizon-2: 30/50 intervals
+horizon-2: 40/50 intervals
+horizon-2: 50/50 intervals
+horizon-2 {"status": "completed", "completed_intervals": 50, "requested_intervals": 50, "warmup_seconds": 0.0032430880000902107, "wall_seconds": 39.24204266400011, "status_codes": {"0": "completed", "1": "timeout", "2": "angle_limit", "3": "missed_detector", "4": "invalid_turning_points", "5": "grazing", "6": "integration_failed"}}
+Recorded 13 outcomes; completed 13

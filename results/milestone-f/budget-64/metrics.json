@@ -1,0 +1,31 @@
+{
+  "name": "budget-64",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "refinement",
+  "timing_rms_ms": 2.227350534723401,
+  "last10_timing_rms_ms": 2.9638582413117076,
+  "amplitude_rms_deg": 0.3534815362090705,
+  "last10_amplitude_rms_deg": 0.4102213197699245,
+  "absolute_work_uJ": 4.415958052800858,
+  "signed_work_uJ": 4.247093993008572,
+  "maximum_angle_deg": 5.043041512820854,
+  "exact_energy_relative_residual": 3.8951233014522275e-13,
+  "equation4_energy_relative_residual": 0.0015442991421756426,
+  "sensor_timestamp_max_error_us": 0.022856508463675596,
+  "sensor_speed_max_relative_error": 2.3864762047310495e-05,
+  "sensor_delay_mean_us": 166.4837378839401,
+  "optimization_median_s": 0.32129413350003233,
+  "optimization_p95_s": 0.3639291413999444,
+  "optimization_max_s": 0.41037067299976115,
+  "optimization_to_interval_p95": 7.268778853815255,
+  "invalid_candidate_fraction": 0.0,
+  "candidate_status_counts": {
+    "0": 6500
+  },
+  "evaluations": 6500,
+  "fallback_count": 0,
+  "wall_seconds": 24.957917395000095
+}

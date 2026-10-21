@@ -147,3 +147,25 @@ Use the project-local interpreter as described above. Raw data and provenance
 are saved with each example. B saves .5s of voltages/events plus refinement;
 C saves ten detector passages and reconstruction/truth records; D saves a
 four-event constant-parameter prediction and all continuation states.
+
+## F: completed evaluation
+
+All 13 declared configurations completed: 800 total event intervals and 366350
+candidate/mean evaluations. No closed-loop termination or final all-invalid
+fallback occurred. Uniform shooting did produce rejected candidates; their
+statuses/costs are retained, rather than counted as successful predictions.
+The full suite and 28-test log are in results/milestone-f; the integrity record
+checks completed counts, finite trajectories, causal application ordering,
+angle limits, complete candidate records and common scientific source hashes.
+Regenerating B/C raw arrays and D predictions reproduced the archived arrays
+exactly; the first 50 long-run actions equal the separate seed1 run.
+
+See [scientific report](../results/milestone-f/REPORT.md),
+[Chinese conclusions](实验结论.md), and [data schema](results-schema.md).
+Nominal MPC mean RMS errors across seeds1–3 are 1.68559ms and .263692 degrees;
+the initialized nominal fixed HCO tracks more accurately in these cases.
+Full M=256/R=2 optimization is about 1.2s per event on this four-core machine,
+well above the 50ms nominal interval. Numerical implementation checks passed;
+tracking advantage and real-time execution are not established by these results.
+The manuscript PDF remains unchanged and no unsupported favorable conclusion
+has been inserted into it.

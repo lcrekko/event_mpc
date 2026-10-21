@@ -12,3 +12,10 @@ F. Agree experiments, comparisons and metrics; then measure performance and runt
 Proposed architecture as modules become needed: mechanics, neurons, actuation/sensing, prediction, objective/constraints, optimization, closed_loop; separate experiment configurations and postprocessing. No empty module scaffolding or full controller implementation in onboarding.
 
 Update: Milestone A completed following the user's instruction to retain equations (2) and (4). Eight unit tests and thirteen numerical checks passed. See repository docs/milestone-a-results.md for evidence and commands. Next bounded task is Milestone B; it has not been started.
+
+Subsequent update: the user authorized all B–F work. B–E implementation and
+validation are complete; F's 13 declared experiments completed 800 total
+intervals. See ../milestones-b-f.md and ../../results/milestone-f/REPORT.md.
+The historical “B not started” statement above describes the earlier checkpoint.
+Current results require improved tracking evidence and computation speed before
+claiming paper-level control advantages or real-time deployment.

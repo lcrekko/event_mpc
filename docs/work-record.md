@@ -68,3 +68,11 @@ code used. Do not substitute a later Git commit into those historical records.
 - Chinese local-development guidance and full cloud setup/startup instructions
   now live in the repository. Saved cloud configuration and GitHub pushes are
   separate from publishing a cloud environment snapshot.
+
+Final F outcome: 13/13 configurations completed, 800 event intervals, 366350
+evaluations, 28 passing tests. All planned nominal/random-shooting/constant/
+long-run/mismatch/budget/horizon cases have raw results and metrics. Frozen
+solver audits and data-integrity checks passed. Results establish executable,
+validated development capabilities; the nominal tracking comparison favors the
+fixed baseline and full optimization exceeds the nominal real-time budget.
+Those limitations are retained in both English and Chinese reports.
