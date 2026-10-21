@@ -1,0 +1,338 @@
+{
+  "observations": [
+    {
+      "crossing_time": 0.04999999290777614,
+      "available_time": 0.05015826734526406,
+      "omega": -5.513616979771385,
+      "first_detector": "L",
+      "second_detector": "R",
+      "true_time": 0.04999997732479124,
+      "true_omega": -5.5137061231839155
+    },
+    {
+      "crossing_time": 0.09999997437244493,
+      "available_time": 0.10015824864026975,
+      "omega": 5.51362289012824,
+      "first_detector": "R",
+      "second_detector": "L",
+      "true_time": 0.09999995878949344,
+      "true_omega": 5.513712033445275
+    },
+    {
+      "crossing_time": 0.14999995954366177,
+      "available_time": 0.15015823364675396,
+      "omega": -5.513628628739581,
+      "first_detector": "L",
+      "second_detector": "R",
+      "true_time": 0.14999994396074273,
+      "true_omega": -5.513717771963985
+    },
+    {
+      "crossing_time": 0.19999994819800276,
+      "available_time": 0.20015822214099604,
+      "omega": 5.513634205942122,
+      "first_detector": "R",
+      "second_detector": "L",
+      "true_time": 0.19999993261511523,
+      "true_omega": 5.51372334907608
+    },
+    {
+      "crossing_time": 0.24999994012549592,
+      "available_time": 0.2501582139127451,
+      "omega": -5.513639631452426,
+      "first_detector": "L",
+      "second_detector": "R",
+      "true_time": 0.24999992454263908,
+      "true_omega": -5.5137287744981425
+    },
+    {
+      "crossing_time": 0.29999993512882733,
+      "available_time": 0.30015820876442506,
+      "omega": 5.513644914400978,
+      "first_detector": "R",
+      "second_detector": "L",
+      "true_time": 0.2999999195460003,
+      "true_omega": 5.513734057361952
+    },
+    {
+      "crossing_time": 0.3499999330225777,
+      "available_time": 0.35015820651037016,
+      "omega": -5.513650063372058,
+      "first_detector": "L",
+      "second_detector": "R",
+      "true_time": 0.3499999174397798,
+      "true_omega": -5.5137392062496104
+    },
+    {
+      "crossing_time": 0.39999993363250574,
+      "available_time": 0.4001582069761077,
+      "omega": 5.51365508643032,
+      "first_detector": "R",
+      "second_detector": "L",
+      "true_time": 0.3999999180497363,
+      "true_omega": 5.513744229226561
+    },
+    {
+      "crossing_time": 0.44999993679487404,
+      "available_time": 0.4501582099976825,
+      "omega": -5.513659991156562,
+      "first_detector": "L",
+      "second_detector": "R",
+      "true_time": 0.4499999212121323,
+      "true_omega": -5.513749133872665
+    },
+    {
+      "crossing_time": 0.4999999423558157,
+      "available_time": 0.5001582154210232,
+      "omega": 5.513664784673336,
+      "first_detector": "R",
+      "second_detector": "L",
+      "true_time": 0.499999926773101,
+      "true_omega": 5.51375392731143
+    }
+  ],
+  "detector_events": [
+    {
+      "time": 0.00015829019628319597,
+      "detector": "L"
+    },
+    {
+      "time": 0.04984171847028822,
+      "detector": "L"
+    },
+    {
+      "time": 0.05015826734526406,
+      "detector": "R"
+    },
+    {
+      "time": 0.09984170010462012,
+      "detector": "R"
+    },
+    {
+      "time": 0.10015824864026975,
+      "detector": "L"
+    },
+    {
+      "time": 0.14984168544056958,
+      "detector": "L"
+    },
+    {
+      "time": 0.15015823364675396,
+      "detector": "R"
+    },
+    {
+      "time": 0.19984167425500945,
+      "detector": "R"
+    },
+    {
+      "time": 0.20015822214099604,
+      "detector": "L"
+    },
+    {
+      "time": 0.24984166633824675,
+      "detector": "L"
+    },
+    {
+      "time": 0.2501582139127451,
+      "detector": "R"
+    },
+    {
+      "time": 0.2998416614932296,
+      "detector": "R"
+    },
+    {
+      "time": 0.30015820876442506,
+      "detector": "L"
+    },
+    {
+      "time": 0.3498416595347852,
+      "detector": "L"
+    },
+    {
+      "time": 0.35015820651037016,
+      "detector": "R"
+    },
+    {
+      "time": 0.39984166028890383,
+      "detector": "R"
+    },
+    {
+      "time": 0.4001582069761077,
+      "detector": "L"
+    },
+    {
+      "time": 0.4498416635920656,
+      "detector": "L"
+    },
+    {
+      "time": 0.4501582099976825,
+      "detector": "R"
+    },
+    {
+      "time": 0.49984166929060814,
+      "detector": "R"
+    },
+    {
+      "time": 0.5001582154210232,
+      "detector": "L"
+    }
+  ],
+  "switches": [
+    {
+      "time": 0.03183750672039279,
+      "active": true
+    },
+    {
+      "time": 0.04542024808437002,
+      "active": false
+    },
+    {
+      "time": 0.08183755240419442,
+      "active": true
+    },
+    {
+      "time": 0.09542029097198092,
+      "active": false
+    },
+    {
+      "time": 0.1318375953493827,
+      "active": true
+    },
+    {
+      "time": 0.14542033391741435,
+      "active": false
+    },
+    {
+      "time": 0.18183763829482394,
+      "active": true
+    },
+    {
+      "time": 0.19542037686284056,
+      "active": false
+    },
+    {
+      "time": 0.23183768124026438,
+      "active": true
+    },
+    {
+      "time": 0.24542041980826687,
+      "active": false
+    },
+    {
+      "time": 0.2818377241857041,
+      "active": true
+    },
+    {
+      "time": 0.29542046275369327,
+      "active": false
+    },
+    {
+      "time": 0.3318377671311431,
+      "active": true
+    },
+    {
+      "time": 0.34542050569911975,
+      "active": false
+    },
+    {
+      "time": 0.3818378100765814,
+      "active": true
+    },
+    {
+      "time": 0.39542054864454634,
+      "active": false
+    },
+    {
+      "time": 0.43183785302201916,
+      "active": true
+    },
+    {
+      "time": 0.445420591589973,
+      "active": false
+    },
+    {
+      "time": 0.48183789596745624,
+      "active": true
+    },
+    {
+      "time": 0.4954206345353997,
+      "active": false
+    }
+  ],
+  "pair_rejections": [
+    "same_detector"
+  ],
+  "configuration": {
+    "theta": [
+      0.032606,
+      2.0,
+      1.5
+    ],
+    "initial": [
+      0.0,
+      5.5137,
+      -0.7739,
+      -0.4348,
+      -0.4461,
+      -2.3198,
+      -2.4326,
+      -2.1535
+    ],
+    "integration": {
+      "rtol": 1e-07,
+      "atol": [
+        1e-10,
+        1e-08,
+        1e-09,
+        1e-09,
+        1e-09,
+        1e-09,
+        1e-09,
+        1e-09,
+        1e-15,
+        1e-15,
+        1e-15,
+        1e-15
+      ],
+      "max_step": 8.7315e-05,
+      "timeout": 0.1
+    },
+    "neurons": {
+      "tau_fast": 0.00017462978485610506,
+      "tau_slow": 0.0017462978485610506,
+      "tau_ultraslow": 0.017462978485610507,
+      "synaptic_gain": -1.0,
+      "external_current": -1.0,
+      "threshold": 0.0
+    },
+    "mechanics": {
+      "inertia": 1e-07,
+      "natural_frequency": 9.9,
+      "damping_ratio": 0.01,
+      "kappa": 0.030854,
+      "current_limit": 0.12,
+      "angle_limit": 0.17453292519943295
+    }
+  },
+  "provenance": {
+    "head": "76d79c3503d221e8b57ba1e2d47814411b016de1",
+    "git_status": "?? event_mpc/coupled.py\n?? event_mpc/prediction.py\n?? event_mpc/sensing.py\n?? results/milestone-c/\n?? tests/test_coupled.py\n?? tests/test_prediction.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "d0528e51e83754b3a37a2eb519e95d07b67cee1cbc331d56ce850474c8a66248",
+      "event_mpc/coupled.py": "7bb3cef7c2ceb37a8e7e71a9974ae761290f2e73b521ddac04a32da522da8f29",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
+      "event_mpc/sensing.py": "11864fc55cfb9d4d73970b242e927a47290a7b974a764f8079003a2417519027",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": null,
+    "randomness": "none; deterministic prescribed-current integration"
+  }
+}

@@ -32,3 +32,40 @@ primary K=50 intervals plus a K=200 run for the table alternative. Use original
 rounded initialization without recalibration. B is independent of these decisions.
 Exact RK45 numerical implementation remains an explicit choice, not a claim
 of matching the draft's unspecified adaptive fourth-order algorithm.
+
+## C: coupled actuation and sparse sensing
+
+The reference integrator splits at every vf_A threshold root and preserves all
+eight continuous states. It integrates absolute work (19), signed exact work,
+printed (4) work and viscous dissipation as four separate auxiliary states.
+The angle limit is terminal; failures are explicit. Root detection excludes
+initial/duplicate roots, with opposite crossing directions after each pulse.
+No neuronal voltage or mechanical state is reset at current switches.
+
+Detector L is at +.05 degrees, R at -.05 degrees. Pairing consumes only labels
+and timestamps: consecutive opposite detectors within .0025s form one pair;
+same-detector, nonincreasing-time and timeout cases are recorded/rejected.
+No pair is used twice. Crossing timestamp, availability time and signed velocity
+are different observation fields. Simulator truth is used only in validation.
+
+Acceptance: exact energy residual <1e-5 of initial energy, reconstructed timing
+error <2 microseconds and relative speed error <.002 in the nominal test;
+refining integration changes crossing times <.1 microsecond. Four tests passed,
+including rejection cases and causal availability. A ten-passage nominal raw
+run with detector/switch records is saved in results/milestone-c.
+
+## D: event prediction
+
+Eight-state continuation, one turning point per half swing, signed extrema,
+absolute work, angle bounds, transverse-crossing check, detector reach and
+finite .1s timeout are explicit. Failed intervals return no amplitude/work.
+Three tests passed: consecutive event integrations match uninterrupted
+integration within 2e-6 absolute state units / 1e-6 relative; four-event horizon
+preserves all states and alternating extrema; timeout, grazing and insufficient
+detector excursion remain explicit failures.
+
+Future parameter changes are causal: after a crossing the old candidate's
+parameters remain until the outgoing detector; that small tail's work belongs
+to the following half-swing. It is included in that interval's objective term.
+The predictor accepts an estimated state; it has no plant object or truth-state
+access. Saved evidence and reference profiling are in results/milestone-d.
