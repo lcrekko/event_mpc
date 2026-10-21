@@ -129,3 +129,21 @@ python -m event_mpc.profile --output outputs/predictor-profile.json
 
 Set NUMBA_NUM_THREADS=4 for the recorded cloud resource budget (4 CPU quota,
 32GiB memory). Windows PowerShell: `$env:NUMBA_NUM_THREADS="4"` before running.
+
+## B–D bounded examples and raw-data regeneration
+
+These commands regenerate the archived evidence layout into new directories;
+they do not run MPC or overwrite existing results:
+
+```
+python -m event_mpc.evidence b --output outputs/neuron-example
+python -m event_mpc.evidence c --output outputs/sensing-example
+python -m event_mpc.evidence d --output outputs/prediction-example
+python -m unittest discover -s tests -p test_coupled.py -v
+python -m unittest discover -s tests -p test_prediction.py -v
+```
+
+Use the project-local interpreter as described above. Raw data and provenance
+are saved with each example. B saves .5s of voltages/events plus refinement;
+C saves ten detector passages and reconstruction/truth records; D saves a
+four-event constant-parameter prediction and all continuation states.

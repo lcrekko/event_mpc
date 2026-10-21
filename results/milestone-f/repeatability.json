@@ -1,5 +1,8 @@
 {
   "nominal50_vs_first50_of_long200_actions_identical": true,
   "compared_actions": 50,
-  "scope": "Same seed/configuration; optimizer wall times excluded; horizon K does not affect per-event search"
+  "scope": "Same seed/configuration; optimizer wall times excluded; horizon K does not affect per-event search",
+  "regenerated_b_arrays_identical": true,
+  "regenerated_c_arrays_identical": true,
+  "regenerated_d_prediction_identical": true
 }
