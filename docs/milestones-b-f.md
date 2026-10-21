@@ -69,3 +69,63 @@ parameters remain until the outgoing detector; that small tail's work belongs
 to the following half-swing. It is included in that interval's objective term.
 The predictor accepts an estimated state; it has no plant object or truth-state
 access. Saved evidence and reference profiling are in results/milestone-d.
+
+## E: MPC, optimizer, and computational implementation
+
+Implemented (13) literally: gamma^j weights each full bracket, j=0..N-1.
+The first timing term is constant across candidates and the terminal event has
+no timing penalty. No reindexing or alternative objective has been introduced.
+Absolute torque-times-speed integral is not electrical energy.
+
+Implemented projected Gaussian samples with diagonal covariance, M candidates
+including mean, normalized exp[-(J-rho)/lambda] weights, and R=2 updates. Each
+updated mean is evaluated, including the final one; all valid candidates/means
+compete for the returned best sequence. Thus M=256,R=2 costs 514 evaluations.
+This explicit indexing convention resolves the draft's ambiguous round numbering.
+Initial mean repeats nominal theta. Shift/repeat-last (23) initializes the next
+event. If a round is all-invalid retain its mean and continue the remaining
+rounds; if every evaluation is invalid set current=0 and retain previous gains.
+This intermediate-round policy is an implementation choice. No smoothing,
+surrogate, warm-start modification or optimality guarantee is claimed.
+
+The controller reconstructs the mechanical zero state using (24) and propagates
+it and its owned circuit state with old parameters until information availability.
+It never reads the plant's angle, velocity, true crossing time, or predictor's
+true initialization after the initial known state. Reconstructed-time to
+availability work is included as a candidate-independent first-interval term.
+Future candidate switches are similarly delayed to the outgoing detector.
+Optimizer execution time is measured but **not injected as simulated delay**.
+This implements causal sensor delay while still idealizing computational delay.
+
+Profiling of the reference four-event predictor gave about .445s per candidate,
+making full CPU experiments impractical without acceleration. Added Numba solely
+for compiled numerical evaluation. NumPy remains 2.3.5. The accelerated solver
+uses classical RK4 with two-half-step error estimation (difference/15), explicit
+component scales matching the reference, maximum step 87.315 microseconds,
+rtol=1e-7, and bracketed pulse/turning/crossing/limit roots to <=1e-12s. Each
+located discontinuity restarts the integrator without resetting physical states.
+It is a separate adaptive fourth-order implementation, not SciPy RK45 and not
+a claim of bitwise reproduction of the draft's unspecified solver. No fast-math.
+Four CPU threads parallelize independent candidates, with deterministic RNG
+sampling done before parallel evaluation. Compilation warmup is reported apart.
+
+Acceptance before use: compare five four-interval sequences, including uniform
+wide-bound draws, against independent SciPy reference. Event differences <=.2
+microseconds, extrema <=2e-6 rad, work <=2e-10 J plus 1e-4 relative, continuation
+state <=2e-4 absolute plus 1e-4 relative, cost <=2e-8 s². Repeat with half step and
+rtol=1e-9; validate failure status. These thresholds are below sensor separation
+and amplitude scales, and do not stand in for closed-loop robustness evidence.
+
+All 26 tests passed, including the backend, optimizer algebra, literal objective,
+fallback, best-candidate retention, mean evaluation, constant/uniform alternatives,
+state continuation, and a small sensor-only causal closed loop. A three-interval,
+M=8 debug run completed and is saved in results/milestone-e/debug. It is explicitly
+a debugging example, not the planned paper-scale experiment. Reproduce:
+
+```
+python -m event_mpc.closed_loop --output outputs/debug --intervals 3 --samples 8
+python -m event_mpc.profile --output outputs/predictor-profile.json
+```
+
+Set NUMBA_NUM_THREADS=4 for the recorded cloud resource budget (4 CPU quota,
+32GiB memory). Windows PowerShell: `$env:NUMBA_NUM_THREADS="4"` before running.

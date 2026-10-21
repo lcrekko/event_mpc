@@ -1,0 +1,101 @@
+{
+  "events": [
+    {
+      "event_index": 1,
+      "true_time": 0.05005000524041566,
+      "true_omega": -5.517948798450244,
+      "amplitude": 0.08726684580124333,
+      "absolute_work": 9.62080956031411e-08,
+      "observation": {
+        "crossing_time": 0.05005002079944512,
+        "available_time": 0.05020817353795487,
+        "omega": -5.51785972358231,
+        "first_detector": "L",
+        "second_detector": "R"
+      }
+    },
+    {
+      "event_index": 2,
+      "true_time": 0.10050155653931439,
+      "true_omega": 5.369910703566562,
+      "amplitude": -0.0873340927024527,
+      "absolute_work": 1.2284327823866888e-08,
+      "observation": {
+        "crossing_time": 0.10050157296809281,
+        "available_time": 0.10066408581962336,
+        "omega": 5.369819172935449,
+        "first_detector": "R",
+        "second_detector": "L"
+      }
+    },
+    {
+      "event_index": 3,
+      "true_time": 0.15044153185648826,
+      "true_omega": -5.5467356322511305,
+      "amplitude": 0.08499105307408623,
+      "absolute_work": 1.8611544254178304e-07,
+      "observation": {
+        "crossing_time": 0.15044154725469758,
+        "available_time": 0.15059887986373907,
+        "omega": -5.546622733288645,
+        "first_detector": "L",
+        "second_detector": "R"
+      }
+    }
+  ],
+  "detections": [
+    {
+      "time": 0.00015829019628319708,
+      "detector": "L"
+    },
+    {
+      "time": 0.04989186806093538,
+      "detector": "L"
+    },
+    {
+      "time": 0.05020817353795487,
+      "detector": "R"
+    },
+    {
+      "time": 0.10033906011656225,
+      "detector": "R"
+    },
+    {
+      "time": 0.10066408581962336,
+      "detector": "L"
+    },
+    {
+      "time": 0.15028421464565608,
+      "detector": "L"
+    },
+    {
+      "time": 0.15059887986373907,
+      "detector": "R"
+    }
+  ],
+  "switches": [
+    {
+      "time": 0.03298653776608991,
+      "active": true
+    },
+    {
+      "time": 0.04697484644039045,
+      "active": false
+    },
+    {
+      "time": 0.0839456141230767,
+      "active": true
+    },
+    {
+      "time": 0.09771791761001981,
+      "active": false
+    },
+    {
+      "time": 0.13848678976200016,
+      "active": true
+    }
+  ],
+  "rejected_pairs": [
+    "same_detector"
+  ]
+}

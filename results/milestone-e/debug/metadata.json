@@ -1,0 +1,112 @@
+{
+  "description": "nominal",
+  "intervals": 3,
+  "seed": 1,
+  "search": {
+    "horizon": 4,
+    "samples": 8,
+    "rounds": 2,
+    "temperature": 0.00025,
+    "sigma": [
+      0.012,
+      0.04,
+      0.04
+    ],
+    "method": "refinement",
+    "constant_parameters": false
+  },
+  "plant": {
+    "inertia": 1e-07,
+    "natural_frequency": 9.9,
+    "damping_ratio": 0.01,
+    "kappa": 0.030854,
+    "current_limit": 0.12,
+    "angle_limit": 0.17453292519943295
+  },
+  "predictor": {
+    "inertia": 1e-07,
+    "natural_frequency": 9.9,
+    "damping_ratio": 0.01,
+    "kappa": 0.030854,
+    "current_limit": 0.12,
+    "angle_limit": 0.17453292519943295
+  },
+  "neurons": {
+    "tau_fast": 0.00017462978485610506,
+    "tau_slow": 0.0017462978485610506,
+    "tau_ultraslow": 0.017462978485610507,
+    "synaptic_gain": -1.0,
+    "external_current": -1.0,
+    "threshold": 0.0
+  },
+  "integration": {
+    "rtol": 1e-07,
+    "atol": [
+      1e-10,
+      1e-08,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-09,
+      1e-15,
+      1e-15,
+      1e-15,
+      1e-15
+    ],
+    "max_step": 8.7315e-05,
+    "timeout": 0.1
+  },
+  "initial_state": [
+    0.0,
+    5.5137,
+    -0.7739,
+    -0.4348,
+    -0.4461,
+    -2.3198,
+    -2.4326,
+    -2.1535
+  ],
+  "objective": {
+    "period": 0.05,
+    "amplitude": 0.08726646259971647,
+    "gamma": 1.0
+  },
+  "objective_weights": [
+    0.05,
+    0.08726646259971647,
+    0.3282806350011745,
+    84.84282855111023,
+    1.0
+  ],
+  "information": "detector timestamps plus owned circuit state; no measured plant state",
+  "delay": "sensing delay causal; optimizer wall time measured but not injected into simulated time",
+  "provenance": {
+    "head": "62b03d93b10b518c134e6d03fbb055d7c021274e",
+    "git_status": "?? event_mpc/closed_loop.py\n?? event_mpc/fast_prediction.py\n?? event_mpc/objective.py\n?? event_mpc/optimization.py\n?? tests/test_fast_prediction.py\n?? tests/test_optimization.py",
+    "source_sha256": {
+      "event_mpc/__init__.py": "6b4731c017979c9ab24c5cc39994bfe3eff11c2a21077bd4462e65da7ca3a7be",
+      "event_mpc/__main__.py": "d0528e51e83754b3a37a2eb519e95d07b67cee1cbc331d56ce850474c8a66248",
+      "event_mpc/closed_loop.py": "769032a763ed3de7f2c3ac77bd3095e4ce9d7818d25268762c33cb4ddde3c96a",
+      "event_mpc/coupled.py": "7bb3cef7c2ceb37a8e7e71a9974ae761290f2e73b521ddac04a32da522da8f29",
+      "event_mpc/fast_prediction.py": "8c5d476842a3e7f1c4545350fc20064318c6b0f6fc9d53ad96148d3c9161c01f",
+      "event_mpc/mechanics.py": "4d0d97b2adee862f3edd9b6ed8d0891ff45e632bd4e82296b90db1f47b925818",
+      "event_mpc/metrics.py": "5c9c18c4a5fca2de44e83a8f0e54e57f5a90cd523d4e3faa03f7ba6921d5fe4a",
+      "event_mpc/neurons.py": "8aeb064a0bbd6987a13ef0f1df88e822208888fa787201ca68e013c2eaf150a7",
+      "event_mpc/objective.py": "eeab1ec28b88cb4b31932217e6dff3328d94fdff51be93cca3b75bdd8b75e5a3",
+      "event_mpc/optimization.py": "a5e5705004633b84cf4f82d800630cea43c5042872e054c3baa6a46a7573cd13",
+      "event_mpc/prediction.py": "d6cb8fb52f498787900f6ffa13bf8e0af25c972502c61f7c60fd790dd505b71c",
+      "event_mpc/sensing.py": "11864fc55cfb9d4d73970b242e927a47290a7b974a764f8079003a2417519027",
+      "event_mpc/validation.py": "140175bfd36274833f08c9402908269588f1650a6e3721396d880fc179c81df4"
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "seed": null,
+    "randomness": "none; deterministic prescribed-current integration"
+  },
+  "numba": "0.68.0",
+  "llvmlite": "0.50.0"
+}

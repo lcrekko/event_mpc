@@ -1,0 +1,74 @@
+[
+  {
+    "event_index": 0,
+    "label": "round_0",
+    "offset": 0,
+    "count": 8
+  },
+  {
+    "event_index": 0,
+    "label": "updated_mean_0",
+    "offset": 8,
+    "count": 1
+  },
+  {
+    "event_index": 0,
+    "label": "round_1",
+    "offset": 9,
+    "count": 8
+  },
+  {
+    "event_index": 0,
+    "label": "updated_mean_1",
+    "offset": 17,
+    "count": 1
+  },
+  {
+    "event_index": 1,
+    "label": "round_0",
+    "offset": 18,
+    "count": 8
+  },
+  {
+    "event_index": 1,
+    "label": "updated_mean_0",
+    "offset": 26,
+    "count": 1
+  },
+  {
+    "event_index": 1,
+    "label": "round_1",
+    "offset": 27,
+    "count": 8
+  },
+  {
+    "event_index": 1,
+    "label": "updated_mean_1",
+    "offset": 35,
+    "count": 1
+  },
+  {
+    "event_index": 2,
+    "label": "round_0",
+    "offset": 36,
+    "count": 8
+  },
+  {
+    "event_index": 2,
+    "label": "updated_mean_0",
+    "offset": 44,
+    "count": 1
+  },
+  {
+    "event_index": 2,
+    "label": "round_1",
+    "offset": 45,
+    "count": 8
+  },
+  {
+    "event_index": 2,
+    "label": "updated_mean_1",
+    "offset": 53,
+    "count": 1
+  }
+]
