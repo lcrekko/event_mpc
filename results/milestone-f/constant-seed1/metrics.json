@@ -1,0 +1,31 @@
+{
+  "name": "constant-seed1",
+  "status": "completed",
+  "completed_intervals": 50,
+  "requested_intervals": 50,
+  "seed": 1,
+  "method": "refinement",
+  "timing_rms_ms": 0.3006567295254698,
+  "last10_timing_rms_ms": 0.3169648543474616,
+  "amplitude_rms_deg": 0.12533799284398445,
+  "last10_amplitude_rms_deg": 0.1210229254304638,
+  "absolute_work_uJ": 4.425307727942274,
+  "signed_work_uJ": 4.422150963280245,
+  "maximum_angle_deg": 5.00001804237775,
+  "exact_energy_relative_residual": 4.0622959753342976e-13,
+  "equation4_energy_relative_residual": 0.001515675536356469,
+  "sensor_timestamp_max_error_us": 0.01683658856777015,
+  "sensor_speed_max_relative_error": 1.9417540826194942e-05,
+  "sensor_delay_mean_us": 162.28683046649388,
+  "optimization_median_s": 1.1551841775001321,
+  "optimization_p95_s": 1.242891260999886,
+  "optimization_max_s": 1.3714730349997808,
+  "optimization_to_interval_p95": 24.95633229551881,
+  "invalid_candidate_fraction": 0.0,
+  "candidate_status_counts": {
+    "0": 25700
+  },
+  "evaluations": 25700,
+  "fallback_count": 0,
+  "wall_seconds": 66.58234376500013
+}

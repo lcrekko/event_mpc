@@ -46,3 +46,25 @@ private configuration IDs and credentials are not exported.
 The original run metadata records an uncommitted code state, because these runs
 preceded the first implementation commit. Its source hashes document the actual
 code used. Do not substitute a later Git commit into those historical records.
+
+## Subsequent Milestones B–F
+
+- User authorized completing B–F and explicitly approved literal objective
+  indices, causal sensor availability and both K=50 and K=200 experiment lengths.
+- B implemented and independently verified six-state reciprocal neurons. C
+  coupled exact mechanical dynamics and threshold-switched current with detector
+  reconstruction. D validated complete state continuation across events and
+  explicit invalid-rollout statuses. Each milestone was committed and pushed.
+- E implemented projected Gaussian refinement and uniform/constant alternatives,
+  objective, causal sensor-only state reconstruction and receding-horizon updates.
+  A compiled adaptive fourth-order numerical backend was introduced only after
+  profiling and checked against independent SciPy integration and refinement.
+  NumPy stayed at the established pin; Numba/llvmlite are additional recorded
+  dependencies. All candidate sequences, costs and failure codes are preserved.
+- F's declared plan, runtime evidence, solver audits and each completed group of
+  raw results are committed and pushed as the suite runs. The report explicitly
+  lists unrun configurations until the suite finishes. No solver outcome is
+  replaced with fabricated data, and poor tracking results remain in the report.
+- Chinese local-development guidance and full cloud setup/startup instructions
+  now live in the repository. Saved cloud configuration and GitHub pushes are
+  separate from publishing a cloud environment snapshot.

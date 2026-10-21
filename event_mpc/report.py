@@ -170,6 +170,25 @@ def make_report(suite,allow_incomplete=False):
             '![Parameters](figures/nominal-parameters.png)','',
             '![Long run](figures/long-run.png)','',
             '![Neurons](figures/neurons.png)','']
+    findings=['## Numerical findings','']
+    baseline=next((r for r in rows if r['name']=='fixed-nominal'),None)
+    if baseline and 'nominal' in grouped:
+        g=grouped['nominal']
+        findings.append(f"Across {g['recorded_runs']} nominal seeds, mean timing RMS is {g['timing_rms_ms']['mean']:.6g} ms and mean extremum RMS is {g['amplitude_rms_deg']['mean']:.6g} deg. Fixed nominal parameters give {baseline['timing_rms_ms']:.6g} ms and {baseline['amplitude_rms_deg']:.6g} deg. The nominal initialization is already close to the desired periodic orbit; these comparisons do not demonstrate a tracking advantage for MPC.")
+        findings.append(f"Mean nominal MPC absolute work is {g['absolute_work_uJ']['mean']:.6g} microJ versus fixed {baseline['absolute_work_uJ']:.6g} microJ. This is a mechanical-work comparison, not electrical consumption.")
+    for group,g in grouped.items():
+        findings.append(f"{group}: {g['completed_runs']}/{g['recorded_runs']} completed runs. Timing RMS mean/sample SD = {g['timing_rms_ms']['mean']:.6g} / {fmt(g['timing_rms_ms']['std_sample'])} ms; extrema RMS = {g['amplitude_rms_deg']['mean']:.6g} / {fmt(g['amplitude_rms_deg']['std_sample'])} deg.")
+    nonfixed=[r for r in rows if r['method']!='fixed' and r['optimization_to_interval_p95'] is not None]
+    if nonfixed:
+        findings.append(f"Across nonfixed recorded runs, p95 optimization/event-duration ratios range from {min(r['optimization_to_interval_p95'] for r in nonfixed):.4g} to {max(r['optimization_to_interval_p95'] for r in nonfixed):.4g}. A ratio over one rules out one-event computation on this tested setup without further changes. Fixed-baseline timing includes one logged nominal forecast, not a search.")
+    audit_path=suite/'forecast-audit.json'
+    if audit_path.exists():
+        audit=read(audit_path);errors=audit.get('one_step_forecast_errors',[])
+        if errors:
+            findings.append(f"Frozen nominal seed1 selected sequences passed independent/refined solver checks: {audit['passed']}. Across {len(errors)} one-step forecasts, maximum predicted-versus-plant crossing error is {max(abs(e['first_crossing_error_s']) for e in errors):.6g} s and extremum error {max(abs(e['first_extremum_error_rad']) for e in errors):.6g} rad. These are much smaller than the reported control errors; the observed tracking behavior cannot be presented as solver convergence failure. See [audit](forecast-audit.json).")
+    findings+=['',f"Recorded closed-loop failures: {sum(r['status']!='completed' for r in rows)}. Total fallbacks: {sum(r['fallback_count'] for r in rows)}. Unrun: {len(missing)}.",'']
+    insertion=lines.index('## Interpretation and limits')
+    lines[insertion:insertion]=findings
     (suite/'REPORT.md').write_text('\n'.join(lines),encoding='utf-8')
     render_figures(suite,rows)
     if missing and not allow_incomplete:raise RuntimeError('Unrun configurations: '+', '.join(missing))

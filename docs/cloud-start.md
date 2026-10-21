@@ -25,16 +25,43 @@ cd /workspace/event_mpc
 .venv/bin/python -m event_mpc validate
 ```
 
-Expect 8 tests and 13 numerical checks at Milestone A. For a new demonstration,
+All A–E development tests, including independent neuron, hybrid sensing,
+predictor, optimizer and causal closed-loop tests, are in the suite. The
+separate `validate` command retains Milestone A's 13 numerical checks.
+For a new mechanical demonstration,
 use `python -m event_mpc run --output outputs/<new-directory>` with the venv
 interpreter, then the `metrics` and `plot` commands. Do not overwrite old runs.
-Stored evidence lives in results/milestone-a; audit documents in docs/onboarding.
+Stored evidence lives under results/milestone-a through results/milestone-f;
+audit documents are in docs/onboarding. For B–F use docs/milestones-b-f.md,
+docs/experiment-plan.md, and results/milestone-f/REPORT.md. Its status table
+distinguishes completed and unrun configurations.
+
+Use four candidate threads: `export NUMBA_NUM_THREADS=4` in Bash or
+`$env:NUMBA_NUM_THREADS="4"` in PowerShell. For a short controller check:
+
+```bash
+.venv/bin/python -m event_mpc.closed_loop --output outputs/<new-directory> --intervals 3 --samples 8
+```
+
+To regenerate metrics/figures from the downloaded scientific results without
+rerunning numerical integration:
+
+```bash
+.venv/bin/python -m event_mpc.report --suite results/milestone-f
+```
+
+The declared full suite is `python -m event_mpc.experiments --output outputs/<new-suite>`.
+It runs paper-scale CPU workloads and must not be repeated merely as startup.
 
 The user explicitly decided to retain exact sine torque (2) and leave printed
 (4) unchanged. Both energy diagnostics are implemented; the finite-angle
 residual of (4) is reported separately. Do not ask the resolved question again.
-No neurons, sensor reconstruction, E2E predictor or MPC is implemented.
-Milestone B is next only when requested. Windows commands are in README.md;
+Neurons, sensor reconstruction, E2E predictor and MPC are implemented. The user
+approved literal objective indices, causal second-detector parameter application,
+K=50 main runs plus K=200. Do not repeat those resolved questions. Optimizer wall
+time is measured but not injected into simulated delay; no real-time claim is
+supported. Read the scientific results before claiming a control advantage.
+Windows commands are in README.md;
 Windows execution remains unverified. A Linux venv cannot be copied to Windows.
 
 Saving this startup instruction and the installation script to cloud settings

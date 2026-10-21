@@ -36,3 +36,10 @@ class FastPredictionTests(unittest.TestCase):
         np.testing.assert_allclose(a[1],b[1],atol=2e-6,rtol=0)
         timeout=sequence_prediction(INITIAL_STATE,seq,0.,0.,pa,na,87.315e-6,1e-7,.001)
         self.assertEqual(timeout[-1],1)
+        large=INITIAL_STATE.copy();large[1]=30.
+        self.assertEqual(sequence_prediction(large,seq,0.,0.,pa,na)[-1],2)
+        still=INITIAL_STATE.copy();still[:2]=0.
+        self.assertEqual(sequence_prediction(still,seq,0.,0.,pa,na)[-1],5)
+        small=INITIAL_STATE.copy();small[1]=.001
+        unforced=seq.copy();unforced[:,0]=0.
+        self.assertEqual(sequence_prediction(small,unforced,0.,0.,pa,na)[-1],3)
